@@ -1,0 +1,151 @@
+description = "Default layout"
+==
+<!DOCTYPE html>
+<html>
+    <head>
+        {# <meta charset="utf-8">
+        <title>Winter CMS - {{ this.page.title }}</title>
+        <meta name="description" content="{{ this.page.meta_description }}">
+        <meta name="title" content="{{ this.page.meta_title }}">
+        <meta name="author" content="Winter CMS">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="generator" content="Winter CMS">
+        <link rel="icon" type="image/png" href="{{ 'assets/images/winter.png'|theme }}">
+        <link href="{{ 'assets/css/vendor.css'|theme }}" rel="stylesheet">
+        <link href="{{ 'assets/css/theme.css'|theme }}" rel="stylesheet"> #}
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="keywords" content="Больница, Астана">
+    <meta name="description" content="Официальный сайт Городской многопрофильной больницы №2">
+    <title>Главная</title>
+    <link href="my_custom/css/css?family=Raleway:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&amp;display=swap&amp;subset=latin" rel="stylesheet" type="text/css">
+    <link href="{{ 'assets/css/bootstrap.min.css'|theme }}" rel="stylesheet" type="text/css">
+    <link href="{{ 'assets/css/font-awesome.min.css'|theme }}" rel="stylesheet" type="text/css">
+    <link href="{{ 'assets/css/fa-v4-shims.css'|theme }}" rel="stylesheet" type="text/css">
+    <link href="{{ 'assets/css/template.css'|theme }}" rel="stylesheet" type="text/css">
+    <link href="{{ 'assets/css/OwlCarousel2/2.3.4/assets/owl.carousel.min.css'|theme }}" rel="stylesheet" type="text/css">
+    <link href="{{ 'assets/css/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css'|theme }}" rel="stylesheet" type="text/css">
+    <link href="{{ 'assets/css/camera/css/camera.css'|theme }}" rel="stylesheet" type="text/css">
+    <link href="{{ 'assets/css/font-awesome/4.7.0/css/font-awesome.min.css'|theme }}" rel="stylesheet" type="text/css">
+    <!-- MY CUSTOM CSS START -->
+    <link href="{{ 'assets/css/style.css'|theme }}" rel="stylesheet" type="text/css">
+    <link href="{{ 'assets/css/animate.min.css'|theme }}" rel="stylesheet" type="text/css">
+    <link href="{{ 'assets/css/animate.ext.css'|theme }}" rel="stylesheet" type="text/css">
+    <!-- MY CUSTOM CSS END -->
+    <script src="{{ 'assets/js/jquery.min.js'|theme }}" type="text/javascript"></script>
+    <script src="{{ 'assets/js/bootstrap/popper.min.js'|theme }}" type="text/javascript"></script>
+    <script src="{{ 'assets/js/bootstrap/bootstrap.min.js'|theme }}" type="text/javascript"></script>
+    <script src="{{ 'assets/js/bootstrap/main.js'|theme }}" type="text/javascript"></script>
+    <script src="{{ 'assets/js/slider.js'|theme }}" type="text/javascript"></script>
+    <script src="{{ 'assets/js/owl.carousel.min.js'|theme }}" type="text/javascript"></script>
+    <!-- MY CUSTOM JS START -->
+    <script src="{{ 'assets/js/script.js'|theme }}" type="text/javascript"></script>
+    <!-- MY CUSTOM JS END -->
+
+        {% styles %}
+    </head>
+   <body class="site helix-ultimate com-content view-category layout-blog task-none itemid-102 ru-ru ltr sticky-header layout-boxed offcanvas-init offcanvs-position-right">
+
+{#  
+        <!-- Header -->
+        <header id="layout-header">
+            {% partial 'site/header' %}
+        </header>
+
+        <!-- Content -->
+        <section id="layout-content">
+            {% page %}
+        </section>
+
+        <!-- Footer -->
+        <footer id="layout-footer">
+            {% partial 'site/footer' %}
+        </footer>
+
+        <!-- Scripts -->
+        <script src="{{ 'assets/vendor/jquery.js'|theme }}"></script>
+        <script src="{{ 'assets/vendor/bootstrap.js'|theme }}"></script>
+        <script src="{{ 'assets/javascript/app.js'|theme }}"></script>
+        {% snowboard all %}
+        {% scripts %}
+#}
+<div class="dj-offcanvas-wrapper">
+        <div class="dj-offcanvas-pusher">
+            <div class="dj-offcanvas-pusher-in">
+                <div class="sp-preloader">
+                    <div></div>
+                </div>
+                <div class="body-wrapper">
+                    <div class="body-innerwrapper">
+{# header #}    {% partial 'site/header' %}
+
+{# headerSlider #}  {% partial 'site/headerSlider' %}
+                        <section id="sp-section-2">
+                            <div class="container">
+                                <div class="container-inner">
+                                    <div class="row">
+                                        {# sitebar #}
+{# sitebar #}    {% partial 'site/sitebar' %}
+{# sitebarContent #}   {% partial 'site/sitebarContent' %}
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section id="sp-main-body">
+                            <div class="container">
+                                <div class="container-inner">
+                                    <div class="row">
+                                        
+                                        {% partial 'site/main-comments' %}
+
+                                        {% partial 'site/main-componets' %}
+
+                                        {% partial 'site/main-call' %}
+
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section id="sp-section-5">
+                            <div class="container">
+                                <div class="container-inner">
+                                    <div class="row">
+                                        <div id="sp-position8" class="col-lg-12 ">
+                                            <div class="sp-column ">
+                                            
+{# usefulScreen #}  {% partial 'site/usefulScreen' %}
+{# usefulSlider #}  {% partial 'site/usefulSlider' %}
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        
+{# footer #}    {% partial 'site/footer' %}
+
+
+                    </div>
+                </div>
+                <!-- Off Canvas Menu -->
+{# convas #}    {% partial 'site/convas' %}
+                <!-- Go to top -->
+                <a href="#" class="sp-scroll-up" aria-label="Scroll Up"><span class="fa fa-chevron-up"
+                        aria-hidden="true"></span></a>
+            </div>
+        </div>
+    </div>
+
+
+            <!-- Scripts -->
+        {# <script src="{{ 'assets/vendor/jquery.js'|theme }}"></script>
+        <script src="{{ 'assets/vendor/bootstrap.js'|theme }}"></script>
+        <script src="{{ 'assets/javascript/app.js'|theme }}"></script> #}
+        {% snowboard all %}
+{#         {% scripts %} #}
+    </body> 
+</html>
+

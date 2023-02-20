@@ -1,0 +1,138 @@
+tabs:
+    fields:
+        # TAB: Basic info
+        website_name:
+            tab: Basic Info
+            label: Website Name
+            type: text
+            default: SKK
+
+        website_url:
+            tab: Basic Info
+            label: URL
+            type: text
+            default: https://skk.kz
+
+        website_author:
+            tab: Basic Info
+            label: Author
+            type: text
+            default: The Kaisarhan Dev
+    
+        logo:
+            tab: Basic Info
+            label: You logo
+            type: mediafinder
+            mode: image  
+            span: left
+
+        logo_button:
+            tab: Basic Info
+            label: You button logo
+            type: mediafinder
+            mode: image  
+            span: right
+
+
+        # TAB: Slide
+        slide_title:
+            tab: Slide
+            label: Title 
+            type: text
+            default: IT-ИНФРАСТРУКТУРА, ОБСЛУЖИВАНИЕ СЕРВЕРОВ
+        
+        slide_description:
+            tab: Slide
+            label: Description 
+            type: textarea
+            default: Что входит в услугу обслуживания IT-инфраструктуры и серверов
+        
+        slide_items:
+            tab: Slide
+            label: Slides
+            titleFrom: title
+            prompt: Add new service
+            type: repeater
+            form:
+                fields:
+                    name:
+                        label: Slide name
+                        type: text
+                        default: Name one
+                    description:
+                        label: Description
+                        type: textarea
+                        default: Description text
+                    slideImage:
+                        label: Image
+                        type: mediafinder
+                        mode: image
+
+        # TAB: MAIN-COMMENTS
+        comments_title:
+            tab: Comments
+            label: Title 
+            type: text
+            default: Отзывы
+        
+        comments_items:
+            tab: Comments
+            label: Comments
+            titleFrom: title
+            prompt: Add new service
+            type: repeater
+            form:
+                fields:
+                    auth_name:
+                        label: Slide name
+                        type: text
+                        default: Name one
+                    auth_description:
+                        label: Description
+                        type: textarea
+                        default: Description text
+                    auth_Image:
+                        label: Image
+                        type: mediafinder
+                        mode: image                               
+
+        # TAB: CONTACTS
+        contact_title:
+            tab: contact
+            label: Title 
+            type: text
+            default: Есть вопросы? Позвоните нам!
+
+        contact_mail:
+            tab: contact
+            label: Mail
+            type: text
+            default: info@you_domain.kz
+        
+        contact_number:
+            tab: contact
+            label: Title number
+            type: text
+            default: 8 (7172) 57-72-45
+            span: left
+
+        contact_phone:
+            tab: contact
+            label: Phone number
+            type: text
+            default: 87172577245
+            span: right
+
+        contact_number2:
+            tab: contact
+            label: Title number
+            type: text
+            default: 8 (7172) 57-34-25
+            span: left
+
+        contact_phone2:
+            tab: contact
+            label: Phone number
+            type: text
+            default: 87172577245
+            span: right

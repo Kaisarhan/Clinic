@@ -1,0 +1,66 @@
+[viewBag]
+==
+<section id="sp-section-1">
+    <div class="row">
+        <div id="sp-title" class="col-lg-12 ">
+            <div class="sp-column ">
+                <div class="sp-module ">
+                    <div class="sp-module-content">
+
+                        <div class="slideshowck camera_wrap camera_red_skin" id="camera_wrap_102">
+
+        {% if this.theme.slide_items|length > 0 %}
+        {% for slide_item in this.theme.slide_items %}
+                            <div data-alt="«Лучший городской стационар» среди стационаров Республики Казахстан, победитель национальной премии «ALTYN SHIPAGER»!" data-thumb="{{ slide_item.slideImage|media }}"            data-src="{{ slide_item.slideImage|media }}">
+                                <div class="camera_caption fadeIn">
+                                    <div class="camera_caption_title">
+                                        {{ slide_item.name }}
+                                    </div>
+                                    <div class="camera_caption_desc">
+                                        {{ slide_item.description }}
+                                    </div>
+                                </div>
+                            </div>
+        {% endfor %}
+        {% else %}
+                            <div data-alt="«Лучший городской стационар» среди стационаров Республики Казахстан, победитель национальной премии «ALTYN SHIPAGER»!" data-thumb="{{ 'assets/images/WhatsApp.jpeg'|theme }}"            data-src="{{ 'assets/images/WhatsApp.jpeg'|theme }}">
+                                <div class="camera_caption fadeIn">
+                                    <div class="camera_caption_title">
+                                        «Лучший городской стационар» среди стационаров Республики Казахстан, победитель национальной премии «ALTYN SHIPAGER»! 
+                                    </div>
+                                    <div class="camera_caption_desc">
+                                        Исцеляя человека – укрепляем здоровье нации
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div data-alt="С традициями милосердия в век инноваций" data-thumb="{{ 'assets/images/slider/11.JPG'|theme }}" data-src="{{ 'assets/images/slider/11.JPG'|theme }}" data-link="/index.php/ru/o-nas/o-meditsinskoj-organizatsii" data-target="_blank">
+                                <div class="camera_caption fadeIn">
+                                    <div class="camera_caption_title">
+                                        С традициями милосердия в век инноваций 
+                                    </div>
+                                    <div class="camera_caption_desc">
+                                        Исцеляя человека – укрепляем здоровье нации
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-alt="Городская многопрофильная больница №2" data-thumb="{{ 'assets/images/slider/12.JPG'|theme }}" data-src="{{ 'assets/images/slider/12.JPG'|theme }}">
+                                <div class="camera_caption fadeIn">
+                                    <div class="camera_caption_title">
+                                        Городская многопрофильная больница №2 
+                                    </div>
+                                    <div class="camera_caption_desc">
+                                        Одно из крупнейших многопрофильных лечебно-диагностических учреждений в г.Нур-Султан
+                                    </div>
+                                </div>
+                            </div>
+        {% endif %}
+                        </div>
+                        <div style="clear:both;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

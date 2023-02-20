@@ -1,0 +1,132 @@
+<aside id="sp-left" class="col-lg-3 ">
+    <div class="sp-column ">
+        <div class="sp-module ">
+            <h3 class="sp-module-title">{{ this.theme.comments_title }}</h3>
+            <div class="sp-module-content">
+                <div class="owl-carousel owl-theme webique_quotes_boxed jcomments-latest">
+
+        {% if this.theme.comments_items|length > 0 %}
+        {% for comments_item in this.theme.comments_items %}
+                            <div class="webique_quote">
+                                <div class="comment rounded avatar-indent">
+                                    <div class="webique_quote_content">
+                                        "{{comments_item.auth_description}}..."
+                                    </div>
+                                </div>
+                                <div class="webique_quote_info">
+                                    <figure class="webique_img_wrap"><img
+                                            src="{{ comments_item.auth_Image|media }}"
+                                            alt="{{comments_item.auth_name}}"></figure>
+                                    <div class="webique_quote_title_wrap">
+                                        <h6 class="webique_quote_title">{{comments_item.auth_name}}</h6>
+                                        {#<p class="webique_quote_subtitle">17.02.2023
+                                            10:35</p>#}
+                                    </div>
+                                </div>
+                            </div>
+        {% endfor %}
+        {% else %}
+
+                            <div class="webique_quote">
+                                <div class="comment rounded avatar-indent">
+                                    <div class="webique_quote_content">
+                                        "Хочу выразить огромную благодарность урологу
+                                        лечащему врачу Жандосу Маратовичу, внимательный,
+                                        вежливый, за оказанную помощь, за отзывчивость и
+                                        ..."
+                                    </div>
+                                </div>
+                                <div class="webique_quote_info">
+                                    <figure class="webique_img_wrap"><img
+                                            src="{{'assets/images/icons/no-avatar.png'|theme }}"
+                                            alt="Муканова О"></figure>
+                                    <div class="webique_quote_title_wrap">
+                                        <h6 class="webique_quote_title">Муканова О</h6>
+                                        <p class="webique_quote_subtitle">17.02.2023
+                                            10:35</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="webique_quote">
+                                <div class="comment rounded avatar-indent">
+                                    <div class="webique_quote_content">
+                                        "N2 КӨПБЕЙІНДІ ҚАЛАЛЫҚ АУРУХАНА қызметкерлеріне
+                                        шексіз алғысымды білдіремін. Шұғыл гинекология
+                                        бөліміне АМК диагнозымен түстім. Қабылдау
+                                        бөлімшесінен ..."
+                                    </div>
+                                </div>
+                                <div class="webique_quote_info">
+                                    <figure class="webique_img_wrap"><img
+                                            src="{{'assets/images/icons/no-avatar.png'|theme }}"
+                                            alt="Зауреш Амреева"></figure>
+                                    <div class="webique_quote_title_wrap">
+                                        <h6 class="webique_quote_title">Зауреш Амреева
+                                        </h6>
+                                        <p class="webique_quote_subtitle">05.02.2023
+                                            16:22</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="webique_quote">
+                                <div class="comment rounded avatar-indent">
+                                    <div class="webique_quote_content">
+                                        "Я люблю смотреть фильмы, сериалы про врачей. И
+                                        думала, что так бывает только в кино... Но попав
+                                        в ГМБ 2* в Астане в кардиологию и аритмилогию, я
+                                        ..."
+                                    </div>
+                                </div>
+                                <div class="webique_quote_info">
+                                    <figure class="webique_img_wrap"><img
+                                            src="{{'assets/images/icons/no-avatar.png'|theme }}"
+                                            alt="Эйрих Г.А."></figure>
+                                    <div class="webique_quote_title_wrap">
+                                        <h6 class="webique_quote_title">Эйрих Г.А.</h6>
+                                        <p class="webique_quote_subtitle">03.02.2023
+                                            14:42</p>
+                                    </div>
+                                </div>
+                            </div>
+        {% endif %}	            
+                </div>
+            </div>
+        </div>
+    </div>
+</aside>
+
+{#<section id="two" class="main special">
+    <div class="container">
+        <span class="image fit primary"><img src="{{'assets/dist/images/pic02.jpg'|theme }}" alt="" /></span>
+        <div class="content">
+            <header class="major">
+                <h2>{{ this.theme.two_title }}</h2>
+            </header>
+            <p>{{ this.theme.two_description }}</p>
+            <ul class="icons-grid">
+        {% if this.theme.two_items|length > 0 %}
+        {% for two_item in this.theme.two_items %}
+                <li>
+                    <span class="icon {{ two_item.icon }}"></span>
+                    <h3>{{ two_item.name }}</h3>
+                </li>
+                <li>
+                    <span class="icon {{ two_item.icon_two }}"></span>
+                    <h3>{{ two_item.name_two }}</h3>
+                </li>
+        {% endfor %}
+        {% else %}
+                <li>
+                    <span class="icon solid major fa-network-wired"></span>
+                    <h3>обслуживание сетей</h3>
+                </li>
+                <li>
+                    <span class="icon solid major fa-server"></span>
+                    <h3>дистанционное обслуживание ПК и серверов</h3>
+                </li>
+        {% endif %}						
+            </ul>
+        </div>
+        <a href="#three" class="goto-next scrolly">Next</a>
+    </div>
+</section>#}

@@ -1,0 +1,452 @@
+==
+function onStart()
+{
+    $this['backendUrl'] = Backend::url('/');
+}
+==
+{# <!-- Nav -->
+<nav id="layout-nav" class="navbar navbar-inverse navbar-fixed-top navbar-autohide" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="{{ 'home'|page }}">Winter Demo</a>
+        </div>
+        <div class="collapse navbar-collapse navbar-main-collapse">
+            <ul class="nav navbar-nav">
+                <li class="separator hidden-xs"></li>
+                <li class="{% if this.page.id == 'home' %}active{% endif %}"><a href="{{ 'home'|page }}">Basic concepts</a></li>
+                <li class="{% if this.page.id == 'ajax' %}active{% endif %}"><a href="{{ 'ajax'|page }}">AJAX framework</a></li>
+                <li class="{% if this.page.id == 'plugins' %}active{% endif %}"><a href="{{ 'plugins'|page }}">Plugin components</a></li>
+                <li><a href="{{ backendUrl }}">Sign in to the Backend</a></li>
+            </ul>
+        </div>
+    </div>
+</nav> #}
+                        <div id="sp-top-bar">
+                            <div class="container">
+                                <div class="container-inner">
+                                    <div class="row">
+                                        <div id="sp-top1" class="col-lg-4">
+                                            <div class="sp-column text-center text-lg-left" style="font-size:16px;">
+                                                <div class="sp-module ">
+                                                    <div class="sp-module-content">
+
+                                                        <div class="custom">
+                                                            <p>г. Астана,<br>ул. Т. Рыскулова 6, 8</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="sp-top2" class="col-lg-4">
+                                            <div class="sp-column text-center text-lg-center"><a href="#"><img
+                                                        src="{{ this.theme.logo | media }}"
+                                                        style="height: 45px;display: inline-block;"></a></div>
+                                        </div>
+                                        <div id="sp-top3" class="col-lg-4 row">
+                                            <div class="sp-column col-lg-12 text-center text-lg-right">
+                                                <div class="sp-module ">
+                                                    <div class="sp-module-content">
+                                                        <div class="mod-languages">
+                                                            <ul class="lang-inline">
+                                                                <li dir="ltr">
+                                                                    <a href="/index.php/kk/">
+                                                                        Қазақша </a>
+                                                                </li>
+                                                                <li class="lang-active" dir="ltr">
+                                                                    <a href="index.htm">
+                                                                        Русский </a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="sp-column col-lg-7 text-center text-lg-right">
+                                                <ul class="sp-contact-info">
+                                                    <li class="sp-contact-phone"><span class="fa fa-phone"
+                                                            aria-hidden="true"></span> <a href="tel:87172577245">8
+                                                            (7172) 57-72-45</a></li>
+                                                </ul>
+                                            </div>
+                                            <div
+                                                class="sp-column col-lg-5 text-center text-lg-right webique_header_mid_social">
+                                                <ul class="social-icons">
+                                                    <li class="social-icon-facebook"><a target="_blank"
+                                                            href="https://www.facebook.com/astanaclinic.kz"
+                                                            aria-label="facebook"><span class="fa fa-facebook"
+                                                                aria-hidden="true"></span></a></li>
+                                                    <li><a target="_blank"
+                                                            href="https://www.youtube.com/channel/UCxL1YyVp4s3LmmMGVtmWW-A"
+                                                            aria-label="Youtube"><span class="fa fa-youtube"
+                                                                aria-hidden="true"></span></a></li>
+                                                    <li class="social-icon-instagram"><a target="_blank"
+                                                            href="https://www.instagram.com/gmb2_nursultan/"
+                                                            aria-label="Instagram"><span class="fa fa-instagram"
+                                                                aria-hidden="true"></span></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <header id="sp-header">
+                            <div class="container">
+                                <div class="container-inner">
+                                    <div class="row">
+                                        <div id="sp-menu" class="col-lg-12">
+                                            <div class="sp-column">
+                                                <div class="sp-module ">
+                                                    <div class="sp-module-content">
+                                                        <div class="dj-megamenu-wrapper">
+                                                            <ul id="dj-megamenu99"
+                                                                class="dj-megamenu dj-megamenu-default horizontalMenu "
+                                                                data-options='{"wrap":null,"animIn":"fadeInDown","animOut":"fadeOutUp","animSpeed":"fast","openDelay":"250","closeDelay":"500","event":"mouseenter","fixed":"0","offset":"0","theme":"default","direction":"ltr","wcag":"1"}'
+                                                                data-trigger="979">
+                                                                <li class="dj-up itemid105 first active"><a
+                                                                        class="dj-up_a active "
+                                                                        href="index.htm"><span>Главная</span></a></li>
+                                                                <li class="dj-up itemid108 parent separator"><a
+                                                                        class="dj-up_a  " tabindex="0"><span
+                                                                            class="dj-drop">О нас</span></a>
+                                                                    <div class="dj-subwrap  multiple_cols subcols3"
+                                                                        style="">
+                                                                        <div class="dj-subwrap-in" style="width:750px;">
+                                                                            <div class="dj-subcol" style="width:250px">
+                                                                                <ul class="dj-submenu">
+                                                                                    <li class="itemid109 first"><a
+                                                                                            href="o-nas/o-meditsinskoj-organizatsii.html">О
+                                                                                            медицинской организации</a>
+                                                                                    </li>
+                                                                                    <li class="itemid113"><a
+                                                                                            href="o-nas/litsenzii-i-sertifikaty.html">Лицензии
+                                                                                            и сертификаты</a></li>
+                                                                                    <li class="itemid110"><a
+                                                                                            href="o-nas/administratsiya.html">Администрация</a>
+                                                                                    </li>
+                                                                                    <li class="itemid111"><a
+                                                                                            href="o-nas/uslugi.html">Услуги</a>
+                                                                                    </li>
+                                                                                    <li class="itemid131"><a
+                                                                                            href="o-nas/otzyvy-o-nas.html">Отзывы</a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+                                                                            <div class="dj-subcol" style="width:250px">
+                                                                                <ul class="dj-submenu">
+                                                                                    <li class="itemid128 first"><a
+                                                                                            href="o-nas/novosti.html">Новости</a>
+                                                                                    </li>
+                                                                                    <li class="itemid120"><a
+                                                                                            href="o-nas/smi-o-nas.html">СМИ
+                                                                                            о нас</a></li>
+                                                                                    <li class="itemid114"><a
+                                                                                            href="o-nas/vakansii.html">Вакансии</a>
+                                                                                    </li>
+                                                                                    <li class="itemid117"><a
+                                                                                            href="my_custom/phocadownload/userupload/kodeks_etiki_ru.pdf"
+                                                                                            target="_blank">Этический
+                                                                                            кодекс медицинского
+                                                                                            работника</a></li>
+                                                                                </ul>
+                                                                            </div>
+                                                                            <div class="dj-subcol" style="width:250px">
+                                                                                <ul class="dj-submenu">
+                                                                                    <li class="itemid118 first"><a
+                                                                                            href="o-nas/protivodejstvie-korruptsii.html">Противодействие
+                                                                                            коррупции</a></li>
+                                                                                    <li class="itemid119"><a
+                                                                                            href="o-nas/normativno-pravovye-akty.html">Нормативно-правовые
+                                                                                            акты</a></li>
+                                                                                    <li class="itemid122"><a
+                                                                                            href="o-nas/korporativnoe-upravlenie.html">Корпоративное
+                                                                                            управление</a></li>
+                                                                                    <li class="itemid123"><a
+                                                                                            href="o-nas/finansovaya-otchetnost.html">Финансовая
+                                                                                            отчетность</a></li>
+                                                                                    <li class="itemid129"><a
+                                                                                            href="o-nas/gosudarstvennye-zakupki.html">Государственные
+                                                                                            закупки</a></li>
+                                                                                </ul>
+                                                                            </div>
+                                                                            <div style="clear:both;height:0"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="dj-up itemid126"><a class="dj-up_a  "
+                                                                        href="tdeleniya.html"><span>Отделения</span></a>
+                                                                </li>
+                                                                <li class="dj-up itemid221 parent separator"><a
+                                                                        class="dj-up_a  " tabindex="0"><span
+                                                                            class="dj-drop">Пациентам</span></a>
+                                                                    <div class="dj-subwrap  multiple_cols subcols2"
+                                                                        style="">
+                                                                        <div class="dj-subwrap-in" style="width:500px;">
+                                                                            <div class="dj-subcol" style="width:250px">
+                                                                                <ul class="dj-submenu">
+                                                                                    <li class="itemid223 first"><a
+                                                                                            href="p-tsient-m/g-bmp.html">ГОБМП</a>
+                                                                                    </li>
+                                                                                    <li class="itemid224"><a
+                                                                                            href="p-tsient-m/prava-i-obyazannosti-lits-v-oblasti-zdravookhraneniya.html">Права
+                                                                                            и обязанности лиц в области
+                                                                                            здравоохранения</a></li>
+                                                                                    <li class="itemid232"><a
+                                                                                            href="p-tsient-m/otdel-vnutrennego-audita-i-sluzhby-podderzhki-patsientov.html">Отдел
+                                                                                            СПП и внутренней
+                                                                                            экспертизы</a></li>
+                                                                                    <li class="itemid225"><a
+                                                                                            href="p-tsient-m/poleznaya-informatsiya.html">Полезная
+                                                                                            информация</a></li>
+                                                                                    <li class="itemid226"><a
+                                                                                            href="p-tsient-m/prejskurant-tsen-po-platnym-uslugam.html">Прейскурант
+                                                                                            цен по платным услугам</a>
+                                                                                    </li>
+                                                                                    <li class="itemid227"><a
+                                                                                            href="p-tsient-m/blog-direktora.html">Блог
+                                                                                            директора</a></li>
+                                                                                </ul>
+                                                                            </div>
+                                                                            <div class="dj-subcol" style="width:250px">
+                                                                                <ul class="dj-submenu">
+                                                                                    <li class="itemid228 first"><a
+                                                                                            href="p-tsient-m/chasto-zadavaemye-voprosy.html">Часто
+                                                                                            задаваемые вопросы</a></li>
+                                                                                    <li class="itemid229"><a
+                                                                                            href="p-tsient-m/poryadok-okazaniya-statsionarnoj-pomoshchi.html">Порядок
+                                                                                            оказания стационарной
+                                                                                            помощи</a></li>
+                                                                                    <li class="itemid230"><a
+                                                                                            href="p-tsient-m/obyazatelnoe-sotsialnoe-meditsinskoe-strakhovanie.html">Обязательное
+                                                                                            социальное медицинское
+                                                                                            страхование</a></li>
+                                                                                    <li class="itemid309"><a
+                                                                                            href="http://88.204.172.158:8081/AkLisWeb/">Результаты
+                                                                                            исследований онлайн</a></li>
+                                                                                    <li class="itemid315"><a
+                                                                                            href="p-tsient-m/budushchim-mamam.html">Будущим
+                                                                                            мамам</a></li>
+                                                                                    <li class="itemid328"><a
+                                                                                            href="p-tsient-m/perechen-gosudarstvennykh-uslug-v-oblasti-zdravookhraneniya.html">Перечень
+                                                                                            государственных услуг в
+                                                                                            области здравоохранения</a>
+                                                                                    </li>
+                                                                                    <li class="itemid222"><a
+                                                                                            href="p-tsient-m/gosudarstvennye-simvoly-rk.html">Государственные
+                                                                                            символы РК</a></li>
+                                                                                </ul>
+                                                                            </div>
+                                                                            <div style="clear:both;height:0"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="dj-up itemid132"><a class="dj-up_a  "
+                                                                        href="kontakty.html"><span>Контакты</span></a>
+                                                                </li>
+                                                            </ul>
+                                                            <div id="dj-megamenu99mobile"
+                                                                class="dj-megamenu-offcanvas dj-megamenu-offcanvas-light ">
+                                                                <a href="#" class="dj-mobile-open-btn"
+                                                                    aria-label="Open mobile menu"><span
+                                                                        class="fa fa-bars"
+                                                                        aria-hidden="true"></span></a>
+                                                                <aside id="dj-megamenu99offcanvas"
+                                                                    class="dj-offcanvas dj-offcanvas-light "
+                                                                    data-effect="7">
+                                                                    <div class="dj-offcanvas-top">
+                                                                        <a href="#" class="dj-offcanvas-close-btn"
+                                                                            aria-label="Close mobile menu"><span
+                                                                                class="fa fa-close"
+                                                                                aria-hidden="true"></span></a>
+                                                                    </div>
+                                                                    <div class="dj-offcanvas-content">
+                                                                        <ul class="dj-mobile-nav dj-mobile-light ">
+                                                                            <li
+                                                                                class="dj-mobileitem itemid-105 current active">
+                                                                                <a href="index.htm">Главная</a></li>
+                                                                            <li
+                                                                                class="dj-mobileitem itemid-108 divider deeper parent">
+                                                                                <a tabindex="0">О нас</a>
+                                                                                <ul class="dj-mobile-nav-child">
+                                                                                    <li
+                                                                                        class="dj-mobileitem itemid-109">
+                                                                                        <a
+                                                                                            href="o-nas/o-meditsinskoj-organizatsii.html">О
+                                                                                            медицинской организации</a>
+                                                                                    </li>
+                                                                                    <li
+                                                                                        class="dj-mobileitem itemid-113">
+                                                                                        <a
+                                                                                            href="o-nas/litsenzii-i-sertifikaty.html">Лицензии
+                                                                                            и сертификаты</a></li>
+                                                                                    <li
+                                                                                        class="dj-mobileitem itemid-110">
+                                                                                        <a
+                                                                                            href="o-nas/administratsiya.html">Администрация</a>
+                                                                                    </li>
+                                                                                    <li
+                                                                                        class="dj-mobileitem itemid-111">
+                                                                                        <a
+                                                                                            href="o-nas/uslugi.html">Услуги</a>
+                                                                                    </li>
+                                                                                    <li
+                                                                                        class="dj-mobileitem itemid-131">
+                                                                                        <a
+                                                                                            href="o-nas/otzyvy-o-nas.html">Отзывы</a>
+                                                                                    </li>
+                                                                                    <li
+                                                                                        class="dj-mobileitem itemid-128">
+                                                                                        <a
+                                                                                            href="o-nas/novosti.html">Новости</a>
+                                                                                    </li>
+                                                                                    <li
+                                                                                        class="dj-mobileitem itemid-120">
+                                                                                        <a href="o-nas/smi-o-nas.html">СМИ
+                                                                                            о нас</a></li>
+                                                                                    <li
+                                                                                        class="dj-mobileitem itemid-114">
+                                                                                        <a
+                                                                                            href="o-nas/vakansii.html">Вакансии</a>
+                                                                                    </li>
+                                                                                    <li
+                                                                                        class="dj-mobileitem itemid-117">
+                                                                                        <a href="my_custom/phocadownload/userupload/kodeks_etiki_ru.pdf"
+                                                                                            target="_blank">Этический
+                                                                                            кодекс медицинского
+                                                                                            работника</a></li>
+                                                                                    <li
+                                                                                        class="dj-mobileitem itemid-118">
+                                                                                        <a
+                                                                                            href="o-nas/protivodejstvie-korruptsii.html">Противодействие
+                                                                                            коррупции</a></li>
+                                                                                    <li
+                                                                                        class="dj-mobileitem itemid-119">
+                                                                                        <a
+                                                                                            href="o-nas/normativno-pravovye-akty.html">Нормативно-правовые
+                                                                                            акты</a></li>
+                                                                                    <li
+                                                                                        class="dj-mobileitem itemid-122">
+                                                                                        <a
+                                                                                            href="o-nas/korporativnoe-upravlenie.html">Корпоративное
+                                                                                            управление</a></li>
+                                                                                    <li
+                                                                                        class="dj-mobileitem itemid-123">
+                                                                                        <a
+                                                                                            href="o-nas/finansovaya-otchetnost.html">Финансовая
+                                                                                            отчетность</a></li>
+                                                                                    <li
+                                                                                        class="dj-mobileitem itemid-129">
+                                                                                        <a
+                                                                                            href="o-nas/gosudarstvennye-zakupki.html">Государственные
+                                                                                            закупки</a></li>
+                                                                                </ul>
+                                                                            </li>
+                                                                            <li class="dj-mobileitem itemid-126"><a
+                                                                                    href="tdeleniya.html">Отделения</a>
+                                                                            </li>
+                                                                            <li
+                                                                                class="dj-mobileitem itemid-221 divider deeper parent">
+                                                                                <a tabindex="0">Пациентам</a>
+                                                                                <ul class="dj-mobile-nav-child">
+                                                                                    <li
+                                                                                        class="dj-mobileitem itemid-223">
+                                                                                        <a
+                                                                                            href="p-tsient-m/g-bmp.html">ГОБМП</a>
+                                                                                    </li>
+                                                                                    <li
+                                                                                        class="dj-mobileitem itemid-224">
+                                                                                        <a
+                                                                                            href="p-tsient-m/prava-i-obyazannosti-lits-v-oblasti-zdravookhraneniya.html">Права
+                                                                                            и обязанности лиц в области
+                                                                                            здравоохранения</a></li>
+                                                                                    <li
+                                                                                        class="dj-mobileitem itemid-232">
+                                                                                        <a
+                                                                                            href="p-tsient-m/otdel-vnutrennego-audita-i-sluzhby-podderzhki-patsientov.html">Отдел
+                                                                                            СПП и внутренней
+                                                                                            экспертизы</a></li>
+                                                                                    <li
+                                                                                        class="dj-mobileitem itemid-225">
+                                                                                        <a
+                                                                                            href="p-tsient-m/poleznaya-informatsiya.html">Полезная
+                                                                                            информация</a></li>
+                                                                                    <li
+                                                                                        class="dj-mobileitem itemid-226">
+                                                                                        <a
+                                                                                            href="p-tsient-m/prejskurant-tsen-po-platnym-uslugam.html">Прейскурант
+                                                                                            цен по платным услугам</a>
+                                                                                    </li>
+                                                                                    <li
+                                                                                        class="dj-mobileitem itemid-227">
+                                                                                        <a
+                                                                                            href="p-tsient-m/blog-direktora.html">Блог
+                                                                                            директора</a></li>
+                                                                                    <li
+                                                                                        class="dj-mobileitem itemid-228">
+                                                                                        <a
+                                                                                            href="p-tsient-m/chasto-zadavaemye-voprosy.html">Часто
+                                                                                            задаваемые вопросы</a></li>
+                                                                                    <li
+                                                                                        class="dj-mobileitem itemid-229">
+                                                                                        <a
+                                                                                            href="p-tsient-m/poryadok-okazaniya-statsionarnoj-pomoshchi.html">Порядок
+                                                                                            оказания стационарной
+                                                                                            помощи</a></li>
+                                                                                    <li
+                                                                                        class="dj-mobileitem itemid-230">
+                                                                                        <a
+                                                                                            href="p-tsient-m/obyazatelnoe-sotsialnoe-meditsinskoe-strakhovanie.html">Обязательное
+                                                                                            социальное медицинское
+                                                                                            страхование</a></li>
+                                                                                    <li
+                                                                                        class="dj-mobileitem itemid-309">
+                                                                                        <a
+                                                                                            href="http://88.204.172.158:8081/AkLisWeb/">Результаты
+                                                                                            исследований онлайн</a></li>
+                                                                                    <li
+                                                                                        class="dj-mobileitem itemid-315">
+                                                                                        <a
+                                                                                            href="p-tsient-m/budushchim-mamam.html">Будущим
+                                                                                            мамам</a></li>
+                                                                                    <li
+                                                                                        class="dj-mobileitem itemid-328">
+                                                                                        <a
+                                                                                            href="p-tsient-m/perechen-gosudarstvennykh-uslug-v-oblasti-zdravookhraneniya.html">Перечень
+                                                                                            государственных услуг в
+                                                                                            области здравоохранения</a>
+                                                                                    </li>
+                                                                                    <li
+                                                                                        class="dj-mobileitem itemid-222">
+                                                                                        <a
+                                                                                            href="p-tsient-m/gosudarstvennye-simvoly-rk.html">Государственные
+                                                                                            символы РК</a></li>
+                                                                                </ul>
+                                                                            </li>
+                                                                            <li class="dj-mobileitem itemid-132"><a
+                                                                                    href="kontakty.html">Контакты</a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                    <div class="dj-offcanvas-end" tabindex="0"></div>
+                                                                </aside>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="sp-module ">
+                                                    <div class="sp-module-content">
+                                                        <div id="dj-megamenu99mobileWrap"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </header>
