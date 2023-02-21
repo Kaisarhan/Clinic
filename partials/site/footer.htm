@@ -9,9 +9,9 @@
 
                                                         <div class="custom">
                             {% if this.theme.logo_button|length > 0 %}
-                                                            <p><a href="#"><img src="{{ this.theme.logo_button|media }}" alt=""></a></p>
+                                                            <p><a href="{{ 'home'|page }}"><img src="{{ this.theme.logo_button|media }}" alt=""></a></p>
                             {% else %}
-                                                            <p><a href="#">Укжите свой лого в Backend</a></p>
+                                                            <p><a href="{{ backendUrl }}">Укжите свой лого в Backend</a></p>
                             {% endif %}
                                                         </div>
                                                     </div>

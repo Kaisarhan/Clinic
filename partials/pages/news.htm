@@ -1,3 +1,14 @@
+[viewBag]
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+postsPerPage = 2
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "news"
+postPage = "new"
+==
+{% set posts = blogPosts.posts%}
 <section id="sp-main-body">
     <div class="container">
         <div class="container-inner">
@@ -6,44 +17,44 @@
                     <div class="sp-column ">
                         <div id="system-message-container">
                         </div>
-
+{% for post in posts %}
                         <div class="blog">
                             <div class="article-list">
                                 <div class="row">
+
                                     <div class="col-md-12">
                                         <div class="article " itemprop="blogPost" itemscope=""
                                             itemtype="https://schema.org/BlogPosting">
                                             <div class="article-intro-image float-left">
-                                                <a href="novosti/1460-druzya-khotim-podelitsya-s-vami-priyatnoj-novostyu.html">
-                                                    <img src="../my_custom/images/2023news/20-01-2023/IMG_20230120_085539_888.jpg" alt="">
+                                                <a href="{{ post.url }}">
+                                                {% for image in post.featured_images|slice(0.5) %}
+                                                    <img src="{{ image.path }}" alt="{{ post.title }}">
                                                 </a>
+                                                {% endfor %}
                                             </div>
 
                                             <div class="article-body">
                                                 <div class="article-header">
                                                     <h2>
-                                                        <a href="novosti/1460-druzya-khotim-podelitsya-s-vami-priyatnoj-novostyu.html">
-                                                            Друзья, хотим поделиться с Вами приятной новостью 
+                                                        <a href="{{ post.url }}">
+                                                            {{ post.title }}
                                                         </a>
                                                     </h2>
                                                 </div>
                                                 <div class="article-info">
                                                     <span class="published"
-                                                        title="Опубликовано: 20 января 2023">
-                                                        <time datetime="2023-01-20T14:15:01+06:00">20 января 2023 </time>
+                                                        title="Опубликовано: {{ post.published_at|date('d-m-Y') }}">
+                                                        <time datetime="{{ post.published_at|date('d-m-Y') }}">{{ post.published_at|date('d-m-Y') }} </time>
                                                     </span>
                                                 </div>
 
 
                                                 <div class="article-introtext">
-                                                    <p>Во время заседания жилищной комиссии
-                                                        «Городской многопрофильной больницы №2»
-                                                        было принято решение по приватизации
-                                                        квартир арендуемых сотрудниками ГМБ №2.
+                                                    <p>{{ post.excerpt }}
                                                     </p>
                                                     <div class="jcomments-links">
-                                                    <a class="readmore-link" href="novosti/1460-druzya-khotim-podelitsya-s-vami-priyatnoj-novostyu.html" title="Друзья, хотим поделиться с Вами приятной новостью">
-                                                    Подробнее: Друзья, хотим поделиться с Вами приятной новостью</a> </div>
+                                                    <a class="readmore-link" href="{{ post.url }}" title="{{ post.title }}">
+                                                    Подробнее:{{ post.title }}</a> </div>
                                                 </div>
                                             </div>
 
@@ -122,24 +133,29 @@
 
                                 </div>
                             </div>
-
+{% endfor %}
 
 
                             <nav class="d-flex pagination-wrapper">
                                 <div class="mr-auto">
                                     <ul class="pagination">
-                                        <li class="page-item active"><a class="page-link">1</a>
-                                        </li>
-                                        <li class="page-item"><a class="page-link "
-                                                href="novosti-1.html?start=12" title="2">2</a>
+{% for post in posts %}
+                                        <li class="page-item">
+                                            <a class="page-link">{{ post.render|raw }}</a>
                                         </li>
 
-                                        <li class="page-item"><a class="page-link "
-                                                href="novosti-1.html?start=12"
-                                                title="Вперед">Вперед</a></li>
-                                        <li class="page-item"><a class="page-link "
-                                                href="novosti-10.html?start=312"
-                                                title="В конец">В конец</a></li>
+                                        {#<li class="page-item">
+                                            <a class="page-link " href="novosti-1.html?start=12" title="2">2</a>
+                                        </li> #}
+
+                                        {#<li class="page-item">
+                                            <a class="page-link" href="novosti-1.html?start=12" title="Вперед">Вперед</a>
+                                        </li>
+
+                                        <li class="page-item">
+                                            <a class="page-link " href="novosti-10.html?start=312" title="В конец">В конец</a>
+                                        </li>#}
+{% endfor %}
                                     </ul>
                                 </div>
                                 <div class="pagination-counter">

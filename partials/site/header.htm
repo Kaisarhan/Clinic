@@ -46,11 +46,11 @@ function onStart()
                                         <div id="sp-top2" class="col-lg-4">
                     {% if this.theme.logo|length > 0 %}
                                             <div class="sp-column text-center text-lg-center">
-                                                <a href="#"><img src="{{ this.theme.logo | media }}" style="height: 45px;display: inline-block;"></a>
+                                                <a href="{{ 'home'|page }}"><img src="{{ this.theme.logo | media }}" style="height: 45px;display: inline-block;"></a>
                                             </div>
                     {% else %}
                                             <div class="sp-column text-center text-lg-center">
-                                                <a href="#">Укажите свой лого в backend</a>
+                                                <a href="{{ backendUrl }}">Укажите свой лого в backend</a>
                                             </div>
                     {% endif %}
                                         </div>
@@ -147,7 +147,7 @@ function onStart()
                                                                             <div class="dj-subcol" style="width:250px">
                                                                                 <ul class="dj-submenu">
                                                                                     <li class="itemid128 first"><a
-                                                                                            href="o-nas/novosti.html">Новости</a>
+                                                                                            href="{{ 'news'|page }}">Новости</a>
                                                                                     </li>
                                                                                     <li class="itemid120"><a
                                                                                             href="o-nas/smi-o-nas.html">СМИ

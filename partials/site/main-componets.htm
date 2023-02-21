@@ -18,7 +18,7 @@ postPage = "new"
                 <div class="article" itemprop="blogPost" itemscope=""
                     itemtype="https://schema.org/BlogPosting">
                     <div class="article-intro-image float-left">
-                        <a href="{{ post.url }} ">
+                        <a href="{{ post.url }}">
             {% for image in post.featured_images|slice(0.5) %}
                             <img src="{{ image.path }}" alt="{{ post.title }} ">
             {% endfor %}
