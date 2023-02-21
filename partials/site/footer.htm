@@ -8,9 +8,11 @@
                                                     <div class="sp-module-content">
 
                                                         <div class="custom">
-                                                            <p><a href="/index.php"><img
-                                                                        src="{{ this.theme.logo_button|media }}" alt=""></a>
-                                                            </p>
+                            {% if this.theme.logo_button|length > 0 %}
+                                                            <p><a href="#"><img src="{{ this.theme.logo_button|media }}" alt=""></a></p>
+                            {% else %}
+                                                            <p><a href="#">Укжите свой лого в Backend</a></p>
+                            {% endif %}
                                                         </div>
                                                     </div>
                                                 </div><span class="sp-copyright">© {{ "now" | date("Y") }}</span>
@@ -63,9 +65,9 @@
                                                         <div class="custom">
                                                             <h3 style="margin-bottom: 30px;">Контакты</h3>
                                                             <div class="textwidget">
-                                                                <p>г. Астана,<br>ул. Турара Рыскулова 6, 8</p>
-                                                                <p style="font-size: 20px;">8 (7172) 57-72-45</p>
-                                                                <p style="font-size: 20px;">8 (7172) 57-34-25</p>
+                                                                <p>{{ this.theme.city }},<br>{{ this.theme.address }}</p>
+                                                                <p style="font-size: 20px;">{{ this.theme.contact_number }}</p>
+                                                                <p style="font-size: 20px;">{{ this.theme.contact_number2 }}</p>
                                                                 <h5><a style="font-size: 14px;"
                                                                         href="mailto:{{ this.theme.contact_mail }}">{{ this.theme.contact_mail }}</a>
                                                                 </h5>

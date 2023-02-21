@@ -37,16 +37,22 @@ function onStart()
                                                     <div class="sp-module-content">
 
                                                         <div class="custom">
-                                                            <p>г. Астана,<br>ул. Т. Рыскулова 6, 8</p>
+                                                            <p>{{ this.theme.city }},<br>{{ this.theme.address }}</p>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div id="sp-top2" class="col-lg-4">
-                                            <div class="sp-column text-center text-lg-center"><a href="#"><img
-                                                        src="{{ this.theme.logo | media }}"
-                                                        style="height: 45px;display: inline-block;"></a></div>
+                    {% if this.theme.logo|length > 0 %}
+                                            <div class="sp-column text-center text-lg-center">
+                                                <a href="#"><img src="{{ this.theme.logo | media }}" style="height: 45px;display: inline-block;"></a>
+                                            </div>
+                    {% else %}
+                                            <div class="sp-column text-center text-lg-center">
+                                                <a href="#">Укажите свой лого в backend</a>
+                                            </div>
+                    {% endif %}
                                         </div>
                                         <div id="sp-top3" class="col-lg-4 row">
                                             <div class="sp-column col-lg-12 text-center text-lg-right">

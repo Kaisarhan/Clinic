@@ -18,14 +18,26 @@ tabs:
             label: Author
             type: text
             default: The Kaisarhan Dev
+
+        city:
+            tab: Basic Info
+            label: Ваш город
+            type: text
+            default: г.Астана
     
+        address:
+            tab: Basic Info
+            label: Ваша улица или точный адрес
+            type: text
+            default: Ул. Улыдала 20
+
         logo:
             tab: Basic Info
             label: You logo
             type: mediafinder
             mode: image  
             span: left
-
+            
         logo_button:
             tab: Basic Info
             label: You button logo

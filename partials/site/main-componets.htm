@@ -1,106 +1,51 @@
+[blogPosts]
+pageNumber = "{{ :page }}"
+categoryFilter = "all-news"
+postsPerPage = 3
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "news"
+postPage = "new"
+==
+{% set posts = blogPosts.posts%}
 <main id="sp-component" class="col-lg-6 " role="main">
-                                            <div class="sp-column ">
-                                                <div id="system-message-container">
-                                                </div>
-                                                <div class="blog">
-                                                    <div class="article-list articles-leading clearfix">
-                                                        <div class="article" itemprop="blogPost" itemscope=""
-                                                            itemtype="https://schema.org/BlogPosting">
-                                                            <div class="article-intro-image float-left">
-                                                                <a
-                                                                    href="o-nas/novosti/1460-druzya-khotim-podelitsya-s-vami-priyatnoj-novostyu.html"><img
-                                                                        src="{{'assets/images/2023news/20-01-2023/IMG_20230120_085539_888.jpg'|theme }}"
-                                                                        alt=""></a>
-                                                            </div>
-                                                            <div class="article-body">
-                                                                <div class="article-header">
-                                                                    <h2>
-                                                                        <a
-                                                                            href="o-nas/novosti/1460-druzya-khotim-podelitsya-s-vami-priyatnoj-novostyu.html">
-                                                                            Друзья, хотим поделиться с Вами приятной
-                                                                            новостью </a>
-                                                                    </h2>
-                                                                </div>
-                                                                <div class="article-info">
-                                                                    <span class="published"
-                                                                        title="Опубликовано: 20 января 2023">
-                                                                        <time datetime="2023-01-20T14:15:01+06:00">
-                                                                            20 января 2023 </time>
-                                                                    </span>
-                                                                </div>
-                                                                <div class="article-introtext">
-                                                                    <p>Во время заседания жилищной комиссии «Городской
-                                                                        многопрофильной больницы №2» было принято
-                                                                        решение по приватизации квартир арендуемых
-                                                                        сотрудниками ГМБ №2.</p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="article" itemprop="blogPost" itemscope=""
-                                                            itemtype="https://schema.org/BlogPosting">
-                                                            <div class="article-intro-image float-left">
-                                                                <a
-                                                                    href="o-nas/novosti/1458-predstaviteli-vsemirnoj-organizatsii-zdravookhraneniya-posetili-akusherskij-blok-gmb-2.html"><img
-                                                                        src="{{'assets/images/2023news/19-01-2023/IMG_20230119_161835_501.jpg'|theme }}"
-                                                                        alt=""></a>
-                                                            </div>
-                                                            <div class="article-body">
-                                                                <div class="article-header">
-                                                                    <h2>
-                                                                        <a
-                                                                            href="o-nas/novosti/1458-predstaviteli-vsemirnoj-organizatsii-zdravookhraneniya-posetili-akusherskij-blok-gmb-2.html">
-                                                                            Представители Всемирной организации
-                                                                            здравоохранения посетили Акушерский блок ГМБ
-                                                                            №2 </a>
-                                                                    </h2>
-                                                                </div>
-                                                                <div class="article-info">
-                                                                    <span class="published"
-                                                                        title="Опубликовано: 19 января 2023">
-                                                                        <time datetime="2023-01-19T17:42:08+06:00">
-                                                                            19 января 2023 </time>
-                                                                    </span>
-                                                                </div>
-                                                                <div class="article-introtext">
-                                                                    <p>Представители ВОЗ, совместно с национальным
-                                                                        координатором, главным эпидемиологом
-                                                                        Корпоративного Фонда «University Medical
-                                                                        Center»...</p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="article" itemprop="blogPost" itemscope=""
-                                                            itemtype="https://schema.org/BlogPosting">
-                                                            <div class="article-intro-image float-left">
-                                                                <a
-                                                                    href="o-nas/novosti/1455-vstrecha-ministra-zdravookhraneniya-respubliki-kazakhstan-azhar-giniyat-s-naseleniem.html"><img
-                                                                        src="{{'assets/images/2022news/28-12-2022/IMG_20221228_104130_491.png'|theme }}"
-                                                                        alt=""></a>
-                                                            </div>
-                                                            <div class="article-body">
-                                                                <div class="article-header">
-                                                                    <h2>
-                                                                        <a
-                                                                            href="o-nas/novosti/1455-vstrecha-ministra-zdravookhraneniya-respubliki-kazakhstan-azhar-giniyat-s-naseleniem.html">
-                                                                            Встреча Министра здравоохранения Республики
-                                                                            Казахстан Ажар Гиният с населением </a>
-                                                                    </h2>
-                                                                </div>
-                                                                <div class="article-info">
-                                                                    <span class="published"
-                                                                        title="Опубликовано: 28 декабря 2022">
-                                                                        <time datetime="2022-12-28T17:01:26+06:00">
-                                                                            28 декабря 2022 </time>
-                                                                    </span>
-                                                                </div>
-                                                                <div class="article-introtext">
-                                                                    <p>На встрече презентовали «Деятельность
-                                                                        Министерства здравоохранения в рамках 
-                                                                        реализации поручений Главы государства».</p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </main>
+    <div class="sp-column ">
+        <div id="system-message-container">
+        </div>
+        <div class="blog">
+            <div class="article-list articles-leading clearfix">
+            {% for post in posts %}
+                <div class="article" itemprop="blogPost" itemscope=""
+                    itemtype="https://schema.org/BlogPosting">
+                    <div class="article-intro-image float-left">
+                        <a href="{{ post.url }} ">
+            {% for image in post.featured_images|slice(0.5) %}
+                            <img src="{{ image.path }}" alt="{{ post.title }} ">
+            {% endfor %}
+                        </a>
+                    </div>
+                    <div class="article-body">
+                        <div class="article-header">
+                            <h2>
+                                <a href="{{ post.url }}">
+                                    {{ post.title }} 
+                                </a>
+                            </h2>
+                        </div>
+                        <div class="article-info">
+                            <span class="published"
+                                title="Опубликовано: {{ post.published_at|date('d-m-Y') }}">
+                                <time datetime="{{ post.published_at|date('d-m-Y') }}">
+                                    {{ post.published_at|date('d-m-Y') }} </time>
+                            </span>
+                        </div>
+                        <div class="article-introtext">
+                            <p>{{ post.excerpt }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+</main>
