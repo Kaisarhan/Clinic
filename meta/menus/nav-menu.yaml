@@ -1,0 +1,18 @@
+items:
+    -
+        title: 'All pages'
+        type: all-static-pages
+        code: ''
+        replace: 1
+        viewBag:
+            locale:
+                kz:
+                    title: ''
+                    url: ''
+                ru:
+                    title: ''
+                    url: ''
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+name: nav-menu
