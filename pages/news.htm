@@ -1,5 +1,174 @@
 title = "news"
 url = "/news"
-layout = "news"
+layout = "page"
 is_hidden = 0
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+postsPerPage = 2
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "news"
+postPage = "new"
 ==
+{% set posts = blogPosts.posts%}
+<section id="sp-main-body">
+    <div class="container">
+        <div class="container-inner">
+            <div class="row">
+                <main id="sp-component" class="col-lg-12 " role="main">
+                    <div class="sp-column ">
+                        <div id="system-message-container">
+                        </div>
+{% for post in posts %}
+                        <div class="blog">
+                            <div class="article-list">
+                                <div class="row">
+
+                                    <div class="col-md-12">
+                                        <div class="article " itemprop="blogPost" itemscope=""
+                                            itemtype="https://schema.org/BlogPosting">
+                                            <div class="article-intro-image float-left">
+                                                <a href="{{ post.url }}">
+                                                {% for image in post.featured_images|slice(0.5) %}
+                                                    <img src="{{ image.path }}" alt="{{ post.title }}">
+                                                </a>
+                                                {% endfor %}
+                                            </div>
+
+                                            <div class="article-body">
+                                                <div class="article-header">
+                                                    <h2>
+                                                        <a href="{{ post.url }}">
+                                                            {{ post.title }}
+                                                        </a>
+                                                    </h2>
+                                                </div>
+                                                <div class="article-info">
+                                                    <span class="published"
+                                                        title="Опубликовано: {{ post.published_at|date('d-m-Y') }}">
+                                                        <time datetime="{{ post.published_at|date('d-m-Y') }}">{{ post.published_at|date('d-m-Y') }} </time>
+                                                    </span>
+                                                </div>
+
+
+                                                <div class="article-introtext">
+                                                    <p>{{ post.excerpt }}
+                                                    </p>
+                                                    <div class="jcomments-links">
+                                                    <a class="readmore-link" href="{{ post.url }}" title="{{ post.title }}">
+                                                    Подробнее:{{ post.title }}</a> </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+{#                                     <div class="col-md-12">
+                                        <div class="article " itemprop="blogPost" itemscope=""
+                                            itemtype="https://schema.org/BlogPosting">
+
+
+                                            <div class="article-intro-image float-left">
+                                                <a
+                                                    href="novosti/1458-predstaviteli-vsemirnoj-organizatsii-zdravookhraneniya-posetili-akusherskij-blok-gmb-2.html"><img
+                                                        src="../my_custom/images/2023news/19-01-2023/IMG_20230119_161835_501.jpg"
+                                                        alt=""></a>
+                                            </div>
+
+                                            <div class="article-body">
+
+
+                                                <div class="article-header">
+                                                    <h2>
+                                                        <a
+                                                            href="novosti/1458-predstaviteli-vsemirnoj-organizatsii-zdravookhraneniya-posetili-akusherskij-blok-gmb-2.html">
+                                                            Представители Всемирной организации
+                                                            здравоохранения посетили Акушерский
+                                                            блок ГМБ №2 </a>
+                                                    </h2>
+
+
+
+                                                </div>
+
+
+                                                <div class="article-info">
+
+
+
+
+
+
+                                                    <span class="published"
+                                                        title="Опубликовано: 19 января 2023">
+                                                        <time
+                                                            datetime="2023-01-19T17:42:08+06:00">
+                                                            19 января 2023 </time>
+                                                    </span>
+
+
+
+
+
+                                                </div>
+
+
+                                                <div class="article-introtext">
+                                                    <p>Представители ВОЗ, совместно с
+                                                        национальным координатором, главным
+                                                        эпидемиологом Корпоративного Фонда
+                                                        «University Medical Center»...</p>
+                                                    <div class="jcomments-links"><a
+                                                            class="readmore-link"
+                                                            href="novosti/1458-predstaviteli-vsemirnoj-organizatsii-zdravookhraneniya-posetili-akusherskij-blok-gmb-2.html"
+                                                            title="Представители Всемирной организации здравоохранения посетили Акушерский блок ГМБ №2">Подробнее:
+                                                            Представители Всемирной организации
+                                                            здравоохранения посетили Акушерский
+                                                            блок ГМБ №2</a> </div>
+                                                </div>
+
+
+
+                                            </div>
+
+                                        </div>
+                                    </div> #}
+
+                                </div>
+                            </div>
+{% endfor %}
+
+
+                            <nav class="d-flex pagination-wrapper">
+                                <div class="mr-auto">
+                                    <ul class="pagination">
+{% for post in posts %}
+                                        <li class="page-item">
+                                            <a class="page-link">{{ post.render|raw }}</a>
+                                        </li>
+
+                                        {#<li class="page-item">
+                                            <a class="page-link " href="novosti-1.html?start=12" title="2">2</a>
+                                        </li> #}
+
+                                        {#<li class="page-item">
+                                            <a class="page-link" href="novosti-1.html?start=12" title="Вперед">Вперед</a>
+                                        </li>
+
+                                        <li class="page-item">
+                                            <a class="page-link " href="novosti-10.html?start=312" title="В конец">В конец</a>
+                                        </li>#}
+{% endfor %}
+                                    </ul>
+                                </div>
+                                <div class="pagination-counter">
+                                    Страница 1 из 27 </div>
+                            </nav>
+
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+</section>
