@@ -1,11 +1,11 @@
 description = "page"
 
+[staticMenu]
+code = "nav-menu"
+
 [staticPage]
 useContent = 1
 default = 0
-
-[staticMenu]
-code = "nav-menu"
 ==
 <!DOCTYPE html>
 <html>
@@ -46,29 +46,6 @@ code = "nav-menu"
 <body class="site helix-ultimate com-content view-category layout-blog task-none itemid-102 ru-ru ltr sticky-header layout-boxed offcanvas-init offcanvs-position-right">
 
 layout->page.htm
-
-
-<ul class="{{ class }}">
-    {% for item in staticMenu.menuItems %}
-        <li 
-            class="{{ item.isActive or item.isChildActive ? 'active' : '' }} 
-            {{ item.staticMenu.menuItems ? 'dropdown' : '' }}"
-        >
-            <a 
-                {% if item.staticMenu.menuItems %}class="dropdown-toggle" data-toggle="dropdown"{% endif %} 
-                href="{{ item.url }}"
-            >
-                {{ item.title }}
-
-                {% if item.staticMenu.menuItems %}<span class="caret"></span>{% endif %}
-            </a>
-
-            {% if item.staticMenu.menuItems %}
-                {% partial 'menu-items' items=item.staticMenu.menuItems class='dropdown-menu' %}
-            {% endif %}
-        </li>
-    {% endfor %}
-</ul>
 
 
 {#  {% component 'staticMenu' %}  #}
