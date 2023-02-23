@@ -2,16 +2,9 @@ items:
     -
         title: 'All pages'
         type: all-static-pages
-        code: ''
+        code: all-pages
         replace: 1
         viewBag:
-            locale:
-                kz:
-                    title: ''
-                    url: ''
-                ru:
-                    title: ''
-                    url: ''
             isHidden: '0'
             cssClass: ''
             isExternal: '0'
