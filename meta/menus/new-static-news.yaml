@@ -1,0 +1,19 @@
+items:
+    -
+        title: 'New menu item'
+        type: all-blog-posts
+        code: ''
+        cmsPage: new
+        replace: 1
+        viewBag:
+            locale:
+                kz:
+                    title: ''
+                    url: ''
+                ru:
+                    title: ''
+                    url: ''
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+name: new-static-news

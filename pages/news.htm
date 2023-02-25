@@ -5,12 +5,18 @@ is_hidden = 0
 
 [blogPosts]
 pageNumber = "{{ :page }}"
-postsPerPage = 2
+categoryFilter = "{{ :slug }}"
+postsPerPage = 10
 noPostsMessage = "No posts found"
 sortOrder = "published_at desc"
 categoryPage = "news"
 postPage = "new"
+
+[staticPage]
+useContent = 1
+default = 0
 ==
+
 {% set posts = blogPosts.posts%}
 <section id="sp-main-body">
     <div class="container">

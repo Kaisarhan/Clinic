@@ -1,11 +1,28 @@
 items:
     -
         title: 'All pages'
-        type: all-static-pages
+        nesting: null
+        type: url
+        url: '#'
         code: all-pages
-        replace: 1
+        reference: null
+        cmsPage: null
+        replace: null
         viewBag:
             isHidden: '0'
             cssClass: ''
             isExternal: '0'
+        items:
+            -
+                title: news
+                nesting: 0
+                type: blog-category
+                code: ''
+                reference: '3'
+                cmsPage: news
+                replace: 0
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
 name: nav-menu
