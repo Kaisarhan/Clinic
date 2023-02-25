@@ -1,6 +1,2 @@
 static-pages:
-    home-static: {  }
-    contacts: {  }
-    about:
-        about-vacancies: {  }
-        about-public-procurement: {  }
+    about: {  }

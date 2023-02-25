@@ -1,20 +1,25 @@
 items:
     -
-        title: 'All pages'
-        nesting: null
+        title: Главная
+        type: cms-page
+        code: ''
+        reference: home
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'О Нас'
         type: url
         url: '#'
         code: all-pages
-        reference: null
-        cmsPage: null
-        replace: null
         viewBag:
             isHidden: '0'
             cssClass: ''
             isExternal: '0'
         items:
             -
-                title: news
+                title: Новости
                 nesting: 0
                 type: blog-category
                 code: ''
@@ -25,4 +30,13 @@ items:
                     isHidden: '0'
                     cssClass: ''
                     isExternal: '0'
+    -
+        title: Контакты
+        type: cms-page
+        code: ''
+        reference: contactform
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
 name: nav-menu
