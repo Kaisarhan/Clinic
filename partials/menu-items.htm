@@ -46,31 +46,40 @@
 {#</ul>#}
 
 <ul class="nav navbar-nav navbar-right">
-    {% for item in staticMenu.menuItems %} 
+{% for item in staticMenu.menuItems %} 
     <li class="{{ item.isActive or item.isChildActive ? 'active' : '' }}  {{ item.items ? 'dropdown' : '' }}">
+    
         <a title="{{ item.title }}" {% if item.items %} class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="#"{% else %} href="{{ item.url }}" {% endif %}>
-            {% if item.items %} {{ item.title }} <span class="caret"></span>
-            {% else %} {{ item.title }} 
-            {% endif %}
+{% if item.items %} {{ item.title }} 
+            <span class="caret"></span>
+{% else %} {{ item.title }} <<<-------------- этот условный оперетор пересмотреть и протестировать
+{% endif %}
         </a>
-            {% if item.items %}
+
+{% if item.items %}
         <ul class="dropdown-menu">
-            {% for subitem in item.items %} 
-        <li>
-        <a href="{{ subitem.url }}">{{ subitem.title }}</a>
+{% for subitem in item.items %} 
+
+            <li>
+                <a href="{{ subitem.url }}">{{ subitem.title }}</a>
             </li>
-                {% if subitem.items %}
-                    <ul>
-                        {% for subsubitem in subitem.items %} 
-                        <li>
-                        <a href="{{ subsubitem.url }}">{{ subsubitem.title }}</a>
-                        </li>
-                        {% endfor %}
-                    </ul>
-                {% endif %}
-            {% endfor %} 
+
+{% if subitem.items %}
+
+            <ul>
+{% for subsubitem in subitem.items %} 
+                <li>
+                    <a href="{{ subsubitem.url }}">{{ subsubitem.title }}</a>
+                </li>
+
+{% endfor %}
             </ul>
-           {% endif %}
-            </li>
-    {% endfor %}
+
+{% endif %}
+{% endfor %} 
+        </ul>
+
+{% endif %}
+    </li>
+{% endfor %}
 </ul>
