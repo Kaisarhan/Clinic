@@ -18,6 +18,13 @@ items:
         url: '#'
         code: all-pages
         viewBag:
+            locale:
+                kz:
+                    title: 'Быз туралы'
+                    url: ''
+                ru:
+                    title: ''
+                    url: ''
             isHidden: '1'
             cssClass: ''
             isExternal: '0'
@@ -26,12 +33,18 @@ items:
                 title: Новости
                 nesting: 0
                 type: blog-category
-                url: null
                 code: ''
                 reference: '3'
                 cmsPage: news
                 replace: 0
                 viewBag:
+                    locale:
+                        kz:
+                            title: Жаналык
+                            url: ''
+                        ru:
+                            title: ''
+                            url: ''
                     isHidden: '0'
                     cssClass: ''
                     isExternal: '0'

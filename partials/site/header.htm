@@ -8,102 +8,105 @@ function onStart()
 ?>
 ==
 <div id="sp-top-bar">
-                            <div class="container">
-                                <div class="container-inner">
-                                    <div class="row">
-                                        <div id="sp-top1" class="col-lg-4">
-                                            <div class="sp-column text-center text-lg-left" style="font-size:16px;">
-                                                <div class="sp-module ">
-                                                    <div class="sp-module-content">
-
-                                                        <div class="custom">
-                                                            <p>{{ this.theme.city }},<br>{{ this.theme.address }}</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div id="sp-top2" class="col-lg-4">
-                    {% if this.theme.logo|length > 0 %}
-                                            <div class="sp-column text-center text-lg-center">
-                                                <a href="{{ 'home'|page }}"><img src="{{ this.theme.logo | media }}" style="height: 45px;display: inline-block;"></a>
-                                            </div>
-                    {% else %}
-                                            <div class="sp-column text-center text-lg-center">
-                                                <a href="{{ backendUrl }}">Укажите свой лого в backend</a>
-                                            </div>
-                    {% endif %}
-                                        </div>
-                                        <div id="sp-top3" class="col-lg-4 row">
-                                            <div class="sp-column col-lg-12 text-center text-lg-right">
-                                                <div class="sp-module ">
-                                                    <div class="sp-module-content">
-                                                        <div class="mod-languages">
-                                                            <ul class="lang-inline">
-                                                                <li dir="ltr">
-                                                                    <a href="/index.php/kk/">
-                                                                        Қазақша </a>
-                                                                </li>
-                                                                <li class="lang-active" dir="ltr">
-                                                                    <a href="index.htm">
-                                                                        Русский </a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="sp-column col-lg-7 text-center text-lg-right">
-                                                <ul class="sp-contact-info">
-                                                    <li class="sp-contact-phone"><span class="fa fa-phone"
-                                                            aria-hidden="true"></span> <a href="tel:87172577245">8
-                                                            (7172) 57-72-45</a></li>
-                                                </ul>
-                                            </div>
-                                            <div
-                                                class="sp-column col-lg-5 text-center text-lg-right webique_header_mid_social">
-                                                <ul class="social-icons">
-                                                    <li class="social-icon-facebook"><a target="_blank"
-                                                            href="https://www.facebook.com/astanaclinic.kz"
-                                                            aria-label="facebook"><span class="fa fa-facebook"
-                                                                aria-hidden="true"></span></a></li>
-                                                    <li><a target="_blank"
-                                                            href="https://www.youtube.com/channel/UCxL1YyVp4s3LmmMGVtmWW-A"
-                                                            aria-label="Youtube"><span class="fa fa-youtube"
-                                                                aria-hidden="true"></span></a></li>
-                                                    <li class="social-icon-instagram"><a target="_blank"
-                                                            href="https://www.instagram.com/gmb2_nursultan/"
-                                                            aria-label="Instagram"><span class="fa fa-instagram"
-                                                                aria-hidden="true"></span></a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
+    <div class="container">
+        <div class="container-inner">
+            <div class="row">
+                <div id="sp-top1" class="col-lg-4">
+                    <div class="sp-column text-center text-lg-left" style="font-size:16px;">
+                        <div class="sp-module ">
+                            <div class="sp-module-content">
+                                <div class="custom">
+                                    <p>{{ this.theme.city }},<br>{{ this.theme.address }}</p>
                                 </div>
                             </div>
                         </div>
-                        <header id="sp-header">
-                            <div class="container">
-                                <div class="container-inner">
-                                    <div class="row">
-                                        <div id="sp-menu" class="col-lg-12">
-                                            <div class="sp-column">
-                                                <div class="sp-module ">
-                                                    <div class="sp-module-content">
-                                                    
-                                                    {# {% partial 'menu-items' %} #}
-                                                    {% partial 'theme-menu' %}
-                                                    
-                                                    </div>
-                                                </div>
-                                                <div class="sp-module ">
-                                                    <div class="sp-module-content">
-                                                        <div id="dj-megamenu99mobileWrap"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                    </div>
+                </div>
+                <div id="sp-top2" class="col-lg-4">
+    {% if this.theme.logo|length > 0 %}
+                    <div class="sp-column text-center text-lg-center">
+                        <a href="{{ 'home'|page }}"><img src="{{ this.theme.logo | media }}" style="height: 45px;display: inline-block;"></a>
+                    </div>
+    {% else %}
+                    <div class="sp-column text-center text-lg-center">
+                        <a href="{{ backendUrl }}">Укажите свой лого в backend</a>
+                    </div>
+    {% endif %}
+                </div>
+                <div id="sp-top3" class="col-lg-4 row">
+                    <div class="sp-column col-lg-12 text-center text-lg-right">
+                        <div class="sp-module ">
+                            <div class="sp-module-content">
+                                <div class="mod-languages">
+                                    <ul class="lang-inline">
+                                        {#<li dir="ltr">
+                                            <a href="/index.php/kk/">
+                                                Қазақша </a>
+                                        </li>
+                                        <li class="lang-active" dir="ltr">
+                                            <a href="index.htm">
+                                                Русский </a>#}
+                                        {% component 'localePicker' %}
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
-                        </header>
+                        </div>
+                    </div>
+                    <div class="sp-column col-lg-7 text-center text-lg-right">
+                        <ul class="sp-contact-info">
+                            <li class="sp-contact-phone">
+                                <span class="fa fa-phone" aria-hidden="true"></span>
+                                <a href="tel:{{ this.theme.contact_phone }}">{{ this.theme.contact_number }}</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="sp-column col-lg-5 text-center text-lg-right webique_header_mid_social">
+                        <ul class="social-icons">
+                            <li class="social-icon-facebook">
+                                <a target="_blank" href="{{ this.theme.social_facebook }}" aria-label="facebook">
+                                    <span class="fa fa-facebook" aria-hidden="true"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="{{ this.theme.social_youtube }}" aria-label="Youtube">
+                                    <span class="fa fa-youtube" aria-hidden="true"></span>
+                                </a>
+                            </li>
+                            <li class="social-icon-instagram">
+                                <a target="_blank" href="{{ this.theme.social_instagram }}" aria-label="Instagram">
+                                    <span class="fa fa-instagram" aria-hidden="true"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<header id="sp-header">
+    <div class="container">
+        <div class="container-inner">
+            <div class="row">
+                <div id="sp-menu" class="col-lg-12">
+                    <div class="sp-column">
+                        <div class="sp-module ">
+                            <div class="sp-module-content">
+                            
+                            {# {% partial 'menu-items' %} #}
+                            {% partial 'theme-menu' %}
+                            
+                            </div>
+                        </div>
+                        <div class="sp-module ">
+                            <div class="sp-module-content">
+                                <div id="dj-megamenu99mobileWrap"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

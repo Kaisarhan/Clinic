@@ -110,41 +110,62 @@ tabs:
 
         # TAB: CONTACTS
         contact_title:
-            tab: contact
+            tab: Contact
             label: Title 
             type: text
             default: Есть вопросы? Позвоните нам!
 
         contact_mail:
-            tab: contact
+            tab: Contact
             label: Mail
             type: text
             default: info@you_domain.kz
         
         contact_number:
-            tab: contact
+            tab: Contact
             label: Title number
             type: text
-            default: 8 (7172) 57-72-45
+            default: 8 (7172) 00-00-00
             span: left
 
         contact_phone:
-            tab: contact
+            tab: Contact
             label: Phone number
             type: text
-            default: 87172577245
+            default: 87172000000
             span: right
 
         contact_number2:
-            tab: contact
+            tab: Contact
             label: Title number
             type: text
-            default: 8 (7172) 57-34-25
+            default: 8 (7172) 00-00-00
             span: left
 
         contact_phone2:
-            tab: contact
+            tab: Contact
             label: Phone number
             type: text
-            default: 87172577245
+            default: 87172000000
             span: right
+
+        social_youtube:
+            tab: Social media
+            label: YouTube
+            type: text
+            default: https://youtube.com/you_channel
+            span: left
+
+        social_facebook:
+            tab: Social media
+            label: FaceBook
+            type: text
+            default: https://facebook.com/you_channel
+            span: right
+
+        social_instagram:
+            tab: Social media
+            label: Instagram
+            type: text
+            default: https://instagram.com/you_channel
+            span: left
