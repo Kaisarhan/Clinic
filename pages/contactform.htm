@@ -12,16 +12,29 @@ is_hidden = 0
                         <div id="system-message-container">
                         </div>
                         <form method="post" id="userForm" action="#">
-                            <h2>Записаться на прием</h2>
+                            <div class="d-flex justify-content-center">
+                                <h2>Записаться на прием</h2>
+                            </div>
                             <!-- Do not remove this ID, it is used to identify the page so that the pagination script can work correctly -->
                             <div class="form-floating mb-3">
-  <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-  <label for="floatingInput">Email address</label>
-</div>
-<div class="form-floating">
-  <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-  <label for="floatingPassword">Password</label>
-</div>
+                              <input type="FIO" class="form-control" id="floatingInput" placeholder="ФИО">
+                              <label for="floatingInput">Пожалуйста, введите Ваши полные Фамилию Имя Отчество</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                              <input type="poersonal" class="form-control" id="floatingInput" placeholder="Стоматолог">
+                              <label for="floatingInput">Наименование специалиста, к которому хотите записаться</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                              <input type="number" class="form-control" id="floatingInput" placeholder="8702 000 00 00">
+                              <label for="floatingInput">Введите контактный телефон</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                              <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                              <label for="floatingInput">Введите контактный e-mail</label>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <button type="submit" class="btn btn-success ">Записаться</button>
+                            </div>
                         </form>
                     </div>
                 </main>

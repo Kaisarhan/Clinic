@@ -5,7 +5,8 @@
             <a tabindex="0" {% if item.items %} class="dj-up_a" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="#"{% else %} href="{{ item.url }}" class="dj-up_a" {% endif %}>
 {% if item.items %} 
                 <span class="dj-drop">{{ item.title }}</span>
-{% else %} <span class="dj-drop">{{ item.title }}</span>
+{% else %} 
+                <span class="dj-drop">{{ item.title }}</span>
 {% endif %}
             </a>
             <div class="dj-subwrap  multiple_cols subcols3" style="">
@@ -28,187 +29,38 @@
 {% endfor %}
     </ul>
 
-    <div id="dj-megamenu99mobile"
-        class="dj-megamenu-offcanvas dj-megamenu-offcanvas-light ">
-        <a href="#" class="dj-mobile-open-btn"
-            aria-label="Open mobile menu"><span
-                class="fa fa-bars"
-                aria-hidden="true"></span></a>
-        <aside id="dj-megamenu99offcanvas"
-            class="dj-offcanvas dj-offcanvas-light "
-            data-effect="7">
+     <div id="dj-megamenu99mobile" class="dj-megamenu-offcanvas dj-megamenu-offcanvas-light ">
+        <a href="#" class="dj-mobile-open-btn" aria-label="Open mobile menu">
+            <span class="fa fa-bars" aria-hidden="true"></span>
+        </a>
+        <aside id="dj-megamenu99offcanvas" class="dj-offcanvas dj-offcanvas-light" data-effect="7">
             <div class="dj-offcanvas-top">
-                <a href="#" class="dj-offcanvas-close-btn"
-                    aria-label="Close mobile menu"><span
-                        class="fa fa-close"
-                        aria-hidden="true"></span></a>
+                <a href="#" class="dj-offcanvas-close-btn" aria-label="Close mobile menu">
+                    <span class="fa fa-close" aria-hidden="true"></span>
+                </a>
             </div>
             <div class="dj-offcanvas-content">
                 <ul class="dj-mobile-nav dj-mobile-light ">
-                    <li
-                        class="dj-mobileitem itemid-105 current active">
-                        <a href="index.htm">Главная</a></li>
-                    <li
-                        class="dj-mobileitem itemid-108 divider deeper parent">
-                        <a tabindex="0">О нас</a>
+                {% for item_mobile in staticMenu.menuItems %} 
+    <li class="dj-mobileitem itemid-108 divider deeper parent {{ item_mobile.isActive or item_mobile.isChildActive ? 'first active' : '' }}  {{ item_mobile.items ? 'dropdown' : '' }}">
+<a tabindex="0" {% if item.items %} class="dj-up_a" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="#"{% else %} href="{{ item.url }}" class="dj-up_a" {% endif %}>
+{% if item_mobile.items %}
+{{ item_mobile.title }}
+{% else %} 
+{{ item_mobile.title }}
+{% endif %}
+ </a>
                         <ul class="dj-mobile-nav-child">
-                            <li
-                                class="dj-mobileitem itemid-109">
-                                <a
-                                    href="o-nas/o-meditsinskoj-organizatsii.html">О
-                                    медицинской организации</a>
+                        {% for subitem_mobile in item_mobile.items %} 
+                            <li class="dj-mobileitem 123">
+                                <a href="{{ subitem_mobile.url }}">
+                                    {{ subitem_mobile.title }}
+                                </a>
                             </li>
-                            <li
-                                class="dj-mobileitem itemid-113">
-                                <a
-                                    href="o-nas/litsenzii-i-sertifikaty.html">Лицензии
-                                    и сертификаты</a></li>
-                            <li
-                                class="dj-mobileitem itemid-110">
-                                <a
-                                    href="o-nas/administratsiya.html">Администрация</a>
-                            </li>
-                            <li
-                                class="dj-mobileitem itemid-111">
-                                <a
-                                    href="o-nas/uslugi.html">Услуги</a>
-                            </li>
-                            <li
-                                class="dj-mobileitem itemid-131">
-                                <a
-                                    href="o-nas/otzyvy-o-nas.html">Отзывы</a>
-                            </li>
-                            <li
-                                class="dj-mobileitem itemid-128">
-                                <a
-                                    href="o-nas/novosti.html">Новости</a>
-                            </li>
-                            <li
-                                class="dj-mobileitem itemid-120">
-                                <a href="o-nas/smi-o-nas.html">СМИ
-                                    о нас</a></li>
-                            <li
-                                class="dj-mobileitem itemid-114">
-                                <a
-                                    href="o-nas/vakansii.html">Вакансии</a>
-                            </li>
-                            <li
-                                class="dj-mobileitem itemid-117">
-                                <a href="my_custom/phocadownload/userupload/kodeks_etiki_ru.pdf"
-                                    target="_blank">Этический
-                                    кодекс медицинского
-                                    работника</a></li>
-                            <li
-                                class="dj-mobileitem itemid-118">
-                                <a
-                                    href="o-nas/protivodejstvie-korruptsii.html">Противодействие
-                                    коррупции</a></li>
-                            <li
-                                class="dj-mobileitem itemid-119">
-                                <a
-                                    href="o-nas/normativno-pravovye-akty.html">Нормативно-правовые
-                                    акты</a></li>
-                            <li
-                                class="dj-mobileitem itemid-122">
-                                <a
-                                    href="o-nas/korporativnoe-upravlenie.html">Корпоративное
-                                    управление</a></li>
-                            <li
-                                class="dj-mobileitem itemid-123">
-                                <a
-                                    href="o-nas/finansovaya-otchetnost.html">Финансовая
-                                    отчетность</a></li>
-                            <li
-                                class="dj-mobileitem itemid-129">
-                                <a
-                                    href="o-nas/gosudarstvennye-zakupki.html">Государственные
-                                    закупки</a></li>
+                        {% endfor %}
                         </ul>
                     </li>
-                    <li class="dj-mobileitem itemid-126"><a
-                            href="tdeleniya.html">Отделения</a>
-                    </li>
-                    <li
-                        class="dj-mobileitem itemid-221 divider deeper parent">
-                        <a tabindex="0">Пациентам</a>
-                        <ul class="dj-mobile-nav-child">
-                            <li
-                                class="dj-mobileitem itemid-223">
-                                <a
-                                    href="p-tsient-m/g-bmp.html">ГОБМП</a>
-                            </li>
-                            <li
-                                class="dj-mobileitem itemid-224">
-                                <a
-                                    href="p-tsient-m/prava-i-obyazannosti-lits-v-oblasti-zdravookhraneniya.html">Права
-                                    и обязанности лиц в области
-                                    здравоохранения</a></li>
-                            <li
-                                class="dj-mobileitem itemid-232">
-                                <a
-                                    href="p-tsient-m/otdel-vnutrennego-audita-i-sluzhby-podderzhki-patsientov.html">Отдел
-                                    СПП и внутренней
-                                    экспертизы</a></li>
-                            <li
-                                class="dj-mobileitem itemid-225">
-                                <a
-                                    href="p-tsient-m/poleznaya-informatsiya.html">Полезная
-                                    информация</a></li>
-                            <li
-                                class="dj-mobileitem itemid-226">
-                                <a
-                                    href="p-tsient-m/prejskurant-tsen-po-platnym-uslugam.html">Прейскурант
-                                    цен по платным услугам</a>
-                            </li>
-                            <li
-                                class="dj-mobileitem itemid-227">
-                                <a
-                                    href="p-tsient-m/blog-direktora.html">Блог
-                                    директора</a></li>
-                            <li
-                                class="dj-mobileitem itemid-228">
-                                <a
-                                    href="p-tsient-m/chasto-zadavaemye-voprosy.html">Часто
-                                    задаваемые вопросы</a></li>
-                            <li
-                                class="dj-mobileitem itemid-229">
-                                <a
-                                    href="p-tsient-m/poryadok-okazaniya-statsionarnoj-pomoshchi.html">Порядок
-                                    оказания стационарной
-                                    помощи</a></li>
-                            <li
-                                class="dj-mobileitem itemid-230">
-                                <a
-                                    href="p-tsient-m/obyazatelnoe-sotsialnoe-meditsinskoe-strakhovanie.html">Обязательное
-                                    социальное медицинское
-                                    страхование</a></li>
-                            <li
-                                class="dj-mobileitem itemid-309">
-                                <a
-                                    href="http://88.204.172.158:8081/AkLisWeb/">Результаты
-                                    исследований онлайн</a></li>
-                            <li
-                                class="dj-mobileitem itemid-315">
-                                <a
-                                    href="p-tsient-m/budushchim-mamam.html">Будущим
-                                    мамам</a></li>
-                            <li
-                                class="dj-mobileitem itemid-328">
-                                <a
-                                    href="p-tsient-m/perechen-gosudarstvennykh-uslug-v-oblasti-zdravookhraneniya.html">Перечень
-                                    государственных услуг в
-                                    области здравоохранения</a>
-                            </li>
-                            <li
-                                class="dj-mobileitem itemid-222">
-                                <a
-                                    href="p-tsient-m/gosudarstvennye-simvoly-rk.html">Государственные
-                                    символы РК</a></li>
-                        </ul>
-                    </li>
-                    <li class="dj-mobileitem itemid-132"><a
-                            href="kontakty.html">Контакты</a>
-                    </li>
+                    {% endfor %}
                 </ul>
             </div>
             <div class="dj-offcanvas-end" tabindex="0"></div>
