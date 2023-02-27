@@ -14,9 +14,13 @@ items:
             isExternal: '0'
     -
         title: 'О Нас'
+        nesting: null
         type: url
         url: '#'
         code: all-pages
+        reference: null
+        cmsPage: null
+        replace: null
         viewBag:
             locale:
                 kz:
@@ -33,6 +37,7 @@ items:
                 title: Новости
                 nesting: 0
                 type: blog-category
+                url: null
                 code: ''
                 reference: '3'
                 cmsPage: news
@@ -48,6 +53,39 @@ items:
                     isHidden: '0'
                     cssClass: ''
                     isExternal: '0'
+            -
+                title: Галерея
+                nesting: null
+                type: url
+                url: /galerey
+                code: ''
+                reference: null
+                cmsPage: null
+                replace: null
+                viewBag:
+                    locale:
+                        kz:
+                            title: ''
+                            url: ''
+                        ru:
+                            title: ''
+                            url: ''
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+    -
+        title: Гос.Закуп
+        type: cms-page
+        code: ''
+        reference: gos-zakup
+        viewBag:
+            locale:
+                kz:
+                    title: ''
+                    url: ''
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
     -
         title: Контакты
         nesting: null
@@ -58,6 +96,26 @@ items:
         cmsPage: null
         replace: null
         viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Услуги
+        nesting: null
+        type: url
+        url: /uslugi
+        code: ''
+        reference: null
+        cmsPage: null
+        replace: null
+        viewBag:
+            locale:
+                kz:
+                    title: ''
+                    url: ''
+                ru:
+                    title: ''
+                    url: ''
             isHidden: '0'
             cssClass: ''
             isExternal: '0'

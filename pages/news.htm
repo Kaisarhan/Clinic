@@ -32,18 +32,16 @@ forceUrl = 0
                         <div class="blog">
                             <div class="article-list">
                                 <div class="row">
-
                                     <div class="col-md-12">
                                         <div class="article " itemprop="blogPost" itemscope=""
                                             itemtype="https://schema.org/BlogPosting">
                                             <div class="article-intro-image float-left">
                                                 <a href="{{ post.url }}">
-                                                {% for image in post.featured_images|slice(0.5) %}
+        {% for image in post.featured_images|slice(0.5) %}
                                                     <img src="{{ image.path }}" alt="{{ post.title }}">
                                                 </a>
-                                                {% endfor %}
+        {% endfor %}
                                             </div>
-
                                             <div class="article-body">
                                                 <div class="article-header">
                                                     <h2>
@@ -58,8 +56,6 @@ forceUrl = 0
                                                         <time datetime="{{ post.published_at|date('d-m-Y') }}">{{ post.published_at|date('d-m-Y') }} </time>
                                                     </span>
                                                 </div>
-
-
                                                 <div class="article-introtext">
                                                     <p>{{ post.excerpt }}
                                                     </p>
@@ -71,77 +67,6 @@ forceUrl = 0
 
                                         </div>
                                     </div>
-{#                                     <div class="col-md-12">
-                                        <div class="article " itemprop="blogPost" itemscope=""
-                                            itemtype="https://schema.org/BlogPosting">
-
-
-                                            <div class="article-intro-image float-left">
-                                                <a
-                                                    href="novosti/1458-predstaviteli-vsemirnoj-organizatsii-zdravookhraneniya-posetili-akusherskij-blok-gmb-2.html"><img
-                                                        src="../my_custom/images/2023news/19-01-2023/IMG_20230119_161835_501.jpg"
-                                                        alt=""></a>
-                                            </div>
-
-                                            <div class="article-body">
-
-
-                                                <div class="article-header">
-                                                    <h2>
-                                                        <a
-                                                            href="novosti/1458-predstaviteli-vsemirnoj-organizatsii-zdravookhraneniya-posetili-akusherskij-blok-gmb-2.html">
-                                                            Представители Всемирной организации
-                                                            здравоохранения посетили Акушерский
-                                                            блок ГМБ №2 </a>
-                                                    </h2>
-
-
-
-                                                </div>
-
-
-                                                <div class="article-info">
-
-
-
-
-
-
-                                                    <span class="published"
-                                                        title="Опубликовано: 19 января 2023">
-                                                        <time
-                                                            datetime="2023-01-19T17:42:08+06:00">
-                                                            19 января 2023 </time>
-                                                    </span>
-
-
-
-
-
-                                                </div>
-
-
-                                                <div class="article-introtext">
-                                                    <p>Представители ВОЗ, совместно с
-                                                        национальным координатором, главным
-                                                        эпидемиологом Корпоративного Фонда
-                                                        «University Medical Center»...</p>
-                                                    <div class="jcomments-links"><a
-                                                            class="readmore-link"
-                                                            href="novosti/1458-predstaviteli-vsemirnoj-organizatsii-zdravookhraneniya-posetili-akusherskij-blok-gmb-2.html"
-                                                            title="Представители Всемирной организации здравоохранения посетили Акушерский блок ГМБ №2">Подробнее:
-                                                            Представители Всемирной организации
-                                                            здравоохранения посетили Акушерский
-                                                            блок ГМБ №2</a> </div>
-                                                </div>
-
-
-
-                                            </div>
-
-                                        </div>
-                                    </div> #}
-
                                 </div>
                             </div>
 {% endfor %}
@@ -154,18 +79,6 @@ forceUrl = 0
                                         <li class="page-item">
                                             <a class="page-link">{{ post.render|raw }}</a>
                                         </li>
-
-                                        {#<li class="page-item">
-                                            <a class="page-link " href="novosti-1.html?start=12" title="2">2</a>
-                                        </li> #}
-
-                                        {#<li class="page-item">
-                                            <a class="page-link" href="novosti-1.html?start=12" title="Вперед">Вперед</a>
-                                        </li>
-
-                                        <li class="page-item">
-                                            <a class="page-link " href="novosti-10.html?start=312" title="В конец">В конец</a>
-                                        </li>#}
 {% endfor %}
                                     </ul>
                                 </div>

@@ -1,0 +1,89 @@
+title = "Гос закуп"
+url = "/gos-zakup"
+layout = "page"
+is_hidden = 0
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+categoryFilter = "caterggoszakup2022"
+postsPerPage = 10
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "news"
+postPage = "gos-zakup"
+==
+{% set posts = blogPosts.posts%}
+<section id="sp-main-body">
+	<div class="container">
+		<div class="container-inner">
+			<div class="row">
+				<aside id="sp-left" class="col-lg-3 ">
+					<div class="sp-column ">
+						<div class="sp-module ">
+							<div class="sp-module-content">
+								<div class="custom">
+									<p style="border-bottom: 1px solid #d5251b; padding: 0 0 15px 0;">
+										<a href="/index.php/ru/b-yavleniya-ztsp-2023">Способом запроса ценовыхпредложений</a>
+									</p>
+									<p style="border-bottom: 1px solid #d5251b; padding: 0 0 15px 0;">
+										<a	href="/index.php/ru/o-nas/gosudarstvennye-zakupki">Объявления 2022</a>
+									</p>
+									<p style="border-bottom: 1px solid #d5251b; padding: 0 0 15px 0;">
+										<a href="/index.php/ru/tender-2024">Тендеры 2023</a>
+									</p>
+									<p style="border-bottom: 1px solid #d5251b; padding: 0 0 15px 0;">
+										<a	href="/index.php/ru/tender-2022">Тендеры 2022</a>
+									</p>
+									<p style="border-bottom: 1px solid #d5251b; padding: 0 0 15px 0;">
+										<a href="/index.php/ru/itogi">Итоги</a>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</aside>
+				<main id="sp-component" class="col-lg-9 " role="main">
+					<div class="sp-column ">
+						<div id="system-message-container">
+						</div>
+						<div id="phoca-dl-category-box" class="pd-category-view">
+							<div class="pd-category">
+								<h3 class="ph-subheader pd-ctitle">Объявления ЗЦП 2022</h3>
+{% for post in posts %}
+								{# <div class="pd-filebox">
+									<div class="pd-filenamebox">
+										<div class="pd-title">
+											{{ post.title }}
+										</div>
+										<div class="pd-filename">
+											<div class="pd-document16" style="0 center no-repeat;">
+												<div class="pd-float">
+													<p>{{ post.content_html|raw }}</p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="pd-buttons">
+										<div class="pd-button-download">
+											<a class="btn btn-success" href="{{ post.url }}">Скачать</a>
+										</div>
+									</div> #}
+									{# <div class="pd-cb"></div> #}
+								{# </div> #}
+								<div class="card" style="margin: 1rem;">
+								  <div class="card-body">
+								    <h5 class="card-title">{{ post.title }}</h5>
+								    <p class="card-text">{{ post.content_html|raw }}</p>
+								    {# <a href="{{ post.url }}" class="btn btn-primary">Подробнее</a> #}
+								  </div>
+								</div>
+{% endfor %}								
+							</div>
+						</div>
+						<div class="pd-cb">&nbsp;</div>
+					</div>
+				</main>
+			</div>
+		</div>
+	</div>
+</section>
