@@ -1,0 +1,45 @@
+items:
+    -
+        title: 'Гос Закупки'
+        type: cms-page
+        code: ''
+        reference: gos-zakup
+        viewBag:
+            locale:
+                kz:
+                    title: ''
+                    url: ''
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: '2022'
+        nesting: null
+        type: cms-page
+        url: null
+        code: ''
+        reference: gos-zakup-2022
+        cmsPage: null
+        replace: null
+        viewBag:
+            locale:
+                kz:
+                    title: ''
+                    url: ''
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: '2023'
+        type: cms-page
+        code: ''
+        reference: gos-zakup-2023
+        viewBag:
+            locale:
+                kz:
+                    title: ''
+                    url: ''
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+name: MenuForGosZakup
