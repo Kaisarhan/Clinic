@@ -22,18 +22,34 @@ forceUrl = 0
 {% set posts = blogPosts.posts%}
 <section id="sp-main-body">
     <div class="container">
-        <div class="container-inner">
-            <div class="row">
+        <div class="container-inner d-flex justify-content-around flex-wrap">
+{% for post in posts %}
+<div class="card align-self-center mb-2" style="width: 22rem;">
+{% for image in post.featured_images|slice(0.5) %}
+  <img src="{{ image.path }}" class="card-img-top" alt="{{ post.title }}">
+{% endfor %}
+  <div class="card-body">
+    <h5 class="card-title">{{ post.title }}</h5>
+    <p class="card-text">{{ post.excerpt }}</p>
+    <a href="{{ post.url }}" class="btn btn-primary">Подробнее</a>
+    <span class="published" title="Опубликовано: {{ post.published_at|date('d-m-Y') }}">
+        <time datetime="{{ post.published_at|date('d-m-Y') }}">{{ post.published_at|date('d-m-Y') }} </time>
+    </span>
+  </div>
+</div>
+{% endfor %}
+           {# <div class="row">
                 <main id="sp-component" class="col-lg-12 " role="main">
                     <div class="sp-column ">
                         <div id="system-message-container">
                         </div>
-{% for post in posts %}
+
                         <div class="blog">
-                            <div class="article-list">
+                            <div class="article-list d-flex justify-content-around">
+
                                 <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="article " itemprop="blogPost" itemscope=""
+                                    <div class="col-md-12 d-flex justify-content-around">
+                                         <div class="article " itemprop="blogPost" itemscope=""
                                             itemtype="https://schema.org/BlogPosting">
                                             <div class="article-intro-image float-left">
                                                 <a href="{{ post.url }}">
@@ -64,32 +80,21 @@ forceUrl = 0
                                                     Подробнее:{{ post.title }}</a> </div>
                                                 </div>
                                             </div>
+                                        </div> 
 
-                                        </div>
                                     </div>
                                 </div>
                             </div>
+                            
 {% endfor %}
 
 
-                            <nav class="d-flex pagination-wrapper">
-                                <div class="mr-auto">
-                                    <ul class="pagination">
-{% for post in posts %}
-                                        <li class="page-item">
-                                            <a class="page-link">{{ post.render|raw }}</a>
-                                        </li>
-{% endfor %}
-                                    </ul>
-                                </div>
-                                <div class="pagination-counter">
-                                    Страница 1 из 27 </div>
-                            </nav>
+
 
                         </div>
                     </div>
                 </main>
-            </div>
+                </div>#}
         </div>
     </div>
 </section>

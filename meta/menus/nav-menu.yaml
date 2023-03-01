@@ -75,9 +75,13 @@ items:
                     isExternal: '0'
     -
         title: Гос.Закуп
+        nesting: null
         type: cms-page
+        url: null
         code: ''
         reference: gos-zakup
+        cmsPage: null
+        replace: null
         viewBag:
             locale:
                 kz:
@@ -116,6 +120,17 @@ items:
                 ru:
                     title: ''
                     url: ''
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Отделения
+        nesting: 0
+        type: static-page
+        code: ''
+        reference: otdeleniya
+        replace: 0
+        viewBag:
             isHidden: '0'
             cssClass: ''
             isExternal: '0'

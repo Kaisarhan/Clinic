@@ -29,14 +29,8 @@ default = 0
 						<div class="sp-module ">
 							<div class="sp-module-content">
 								<div class="custom">					
-								    <div class="col-sm-3 col-sm-offset-1">
-                                        <div class="sidebar">
-                                        
-                                        {% component 'staticMenu2' %}
-                        <!-- 
-                            The blog category list will be displayed here
-                        -->
-                                        </div>
+                                    <div class="sidebar">
+									{% partial 'goszakup-menu' %}
                                     </div>
 								</div>
 							</div>
@@ -55,11 +49,8 @@ default = 0
 								  <div class="card-body">
 								    <div class="d-flex justify-content-between">
 								    <h5 class="card-title">{{ post.title }}</h5>
-
 								    </div>
 								    <p class="card-text">{{ post.content_html|raw }}</p>
-								    
-								    {# <a href="{{ post.url }}" class="btn btn-primary">Подробнее</a> #}
 								    <span class="badge bg-info text-dark">{{ post.published_at|date('d-m-Y') }}</span>
 								  </div>
 								  
