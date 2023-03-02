@@ -149,6 +149,7 @@ tabs:
             default: 87172000000
             span: right
 
+        # TAB: SOCIAL
         social_youtube:
             tab: Social media
             label: YouTube
@@ -169,3 +170,46 @@ tabs:
             type: text
             default: https://instagram.com/you_channel
             span: left
+
+        # TAB: BANNERS
+        banners:
+            tab: Banners
+            label: Banners
+            titleFrom: title
+            prompt: Add new banner
+            type: repeater
+            form:
+                fields:
+                    name:
+                        label: Banner name
+                        type: text
+                        default: Banner name
+                    url:
+                        label: url
+                        type: text
+                        default:
+                    bannerImage:
+                        label: Image
+                        type: mediafinder
+                        mode: image
+
+        # TAB: usefulSlider
+        usefulSlider:
+            tab: Mini Slider
+            label: Mini Slider
+            span: storm
+            titleFrom: title
+            prompt: Add new slide
+            type: repeater
+            form:
+                fields:
+                    url:
+                        label: url
+                        type: text
+                        default: https://skk.kz
+                        span: left
+                    img:
+                        label: Image
+                        type: mediafinder
+                        mode: image
+                        span: right

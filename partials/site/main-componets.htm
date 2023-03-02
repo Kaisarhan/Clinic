@@ -12,11 +12,16 @@ postPage = "new"
     <div class="sp-column ">
         <div id="system-message-container">
         </div>
+
+
         <div class="blog">
             <div class="article-list articles-leading clearfix">
+            
+
+
+
             {% for post in posts %}
-                <div class="article" itemprop="blogPost" itemscope=""
-                    itemtype="https://schema.org/BlogPosting">
+                <div class="article" itemprop="blogPost" itemscope="" itemtype="https://schema.org/BlogPosting">
                     <div class="article-intro-image float-left">
                         <a href="{{ post.url }}">
             {% for image in post.featured_images|slice(0.5) %}
@@ -33,19 +38,23 @@ postPage = "new"
                             </h2>
                         </div>
                         <div class="article-info">
-                            <span class="published"
-                                title="Опубликовано: {{ post.published_at|date('d-m-Y') }}">
+                            <span class="published" title="Опубликовано: {{ post.published_at|date('d-m-Y') }}">
                                 <time datetime="{{ post.published_at|date('d-m-Y') }}">
-                                    {{ post.published_at|date('d-m-Y') }} </time>
+                                    {{ post.published_at|date('d-m-Y') }} 
+                                </time>
                             </span>
                         </div>
                         <div class="article-introtext">
-                            <p>{{ post.excerpt }}</p>
+                            <p>
+                                {{ post.excerpt }}
+                            </p>
                         </div>
                     </div>
                 </div>
             {% endfor %}
             </div>
         </div>
+
+
     </div>
 </main>

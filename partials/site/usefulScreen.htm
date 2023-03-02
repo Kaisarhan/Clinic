@@ -1,12 +1,19 @@
 <div class="sp-module ">
     <div class="sp-module-content">
         <div class="custom">
-            <p><a
-                    href="https://www.gov.kz/memleket/entities/astana/activities/22571?lang=ru&parentId=22570"><img
-                        src="{{'assets/images/banners/banner_vibory_ru.jpeg'|theme }} "
-                        alt="" width="100%"></a></p>
-            <p><img src="{{'assets/images/banners/call-center-ru__2022.jpg'|theme }} "
-                    alt="" width="100%"></p>
+        {% for banner in this.theme.banners %}
+            {% if banner.url|length > 0 %}
+            <p>
+                <a href="{{ banner.url }}">
+                    <img src="{{ banner.bannerImage|media }}" alt="{{ banner.name }}" width="100%">
+                </a>
+            </p>
+            {% else %}
+            <p>
+                <img src="{{ banner.bannerImage|media }}" alt="" width="100%">
+            </p>
+            {% endif %}
+        {% endfor %}
         </div>
     </div>
 </div>

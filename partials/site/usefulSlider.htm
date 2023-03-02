@@ -11,76 +11,15 @@
                     <div id="slider-container109"
                         class="slider-container">
                         <ul id="slider109" class="djslider-in">
-                            <li
-                                style="margin: 0 10px 0px 0 !important; height: 160px; width: 240px;">
-                                <a href="glavnaya/zapisatsya-na-priem.html"
-                                    target="_blank">
-                                    <img class="dj-image"
-                                        src="{{'assets/images/banners/ru/spar_pl_ru.jpg'|theme }}"
-                                        alt="1"
-                                        style="width: 100%; height: auto;">
+                        
+{% for usefulSlid in this.theme.usefulSlider %}
+                            <li style="margin: 0 10px 0px 0 !important; height: 160px; width: 240px;">
+                                <a href="{{ usefulSlid.url }}" target="_blank">
+                                    <img class="dj-image" src="{{ usefulSlid.img|media }}" alt="mini slide img" style="width: 100%; height: auto;">
                                 </a>
                             </li>
-                            <li
-                                style="margin: 0 10px 0px 0 !important; height: 160px; width: 240px;">
-                                <a href="glavnaya/zapisatsya-na-priem.html"
-                                    target="_self">
-                                    <img class="dj-image"
-                                        src="{{'assets/images/banners/ru/spar_napr_ru.jpg'|theme }}"
-                                        alt="2"
-                                        style="width: 100%; height: auto;">
-                                </a>
-                            </li>
-                            <li
-                                style="margin: 0 10px 0px 0 !important; height: 160px; width: 240px;">
-                                <a href="p-tsient-m/otdel-vnutrennego-audita-i-sluzhby-podderzhki-patsientov.html"
-                                    target="_self">
-                                    <img class="dj-image"
-                                        src="{{'assets/images/banners/ru/sl_pod_ru.jpg'|theme }}"
-                                        alt="3"
-                                        style="width: 100%; height: auto;">
-                                </a>
-                            </li>
-                            <li
-                                style="margin: 0 10px 0px 0 !important; height: 160px; width: 240px;">
-                                <a href="https://egov.kz/cms/ru/services/health_care/494pass_mz"
-                                    target="_blank">
-                                    <img class="dj-image"
-                                        src="{{'assets/images/banners/ru/poisk_pol_ru.jpg'|theme }}"
-                                        alt="4"
-                                        style="width: 100%; height: auto;">
-                                </a>
-                            </li>
-                            <li
-                                style="margin: 0 10px 0px 0 !important; height: 160px; width: 240px;">
-                                <a href="glavnaya/pravila-obrashcheniya-grazhdan-v-sluzhbu-skoroj-meditsinskoj-pomoshchi.html"
-                                    target="_blank">
-                                    <img class="dj-image"
-                                        src="{{'assets/images/banners/ru/pr_obr_skor_ru.jpg'|theme }}"
-                                        alt="5"
-                                        style="width: 100%; height: auto;">
-                                </a>
-                            </li>
-                            <li
-                                style="margin: 0 10px 0px 0 !important; height: 160px; width: 240px;">
-                                <a href="p-tsient-m/obyazatelnoe-sotsialnoe-meditsinskoe-strakhovanie.html"
-                                    target="_blank">
-                                    <img class="dj-image"
-                                        src="{{'assets/images/banners/ru/osms_ru.jpg'|theme }}"
-                                        alt="6"
-                                        style="width: 100%; height: auto;">
-                                </a>
-                            </li>
-                            <li
-                                style="margin: 0 10px 0px 0 !important; height: 160px; width: 240px;">
-                                <a href="https://www.akorda.kz/ru/addresses/addresses_of_president/poslanie-glavy-gosudarstva-kasym-zhomarta-tokaeva-narodu-kazahstana-1-sentyabrya-2020-g"
-                                    target="_blank">
-                                    <img class="dj-image"
-                                        src="{{'assets/images/banners/ru/posl_pr_ru.jpg'|theme }}"
-                                        alt="7"
-                                        style="width: 100%; height: auto;">
-                                </a>
-                            </li>
+{% endfor %}
+                            
                         </ul>
                     </div>
                     <div id="navigation109" class="navigation-container"

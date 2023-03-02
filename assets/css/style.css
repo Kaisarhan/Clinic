@@ -2998,4 +2998,7 @@ margin-bottom:20px;
   /* UIKit Common Class */
   
   .su-shortcodes-loaded .article-index > h3 { display: none; }
+  .full_width{
+    width: 100%;
+  }
   
