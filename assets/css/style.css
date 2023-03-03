@@ -3005,9 +3005,16 @@ margin-bottom:20px;
     width: 100%;
   }
   .servicesName{
-    padding: 3rem;
+    padding: 3rem 0 0 0;
   }
   .servicesBlog{
+    margin: 2rem;
+  }
+
+  .branchesName{
+    padding: 3rem 0 0 0;
+  }
+  .branchesBlog{
     margin: 2rem;
   }
   
