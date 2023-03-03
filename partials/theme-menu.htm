@@ -43,7 +43,7 @@
                 <ul class="dj-mobile-nav dj-mobile-light ">
                 {% for item_mobile in staticMenu.menuItems %} 
     <li class="dj-mobileitem itemid-108 divider deeper parent {{ item_mobile.isActive or item_mobile.isChildActive ? 'first active' : '' }}  {{ item_mobile.items ? 'dropdown' : '' }}">
-<a tabindex="0" {% if item.items %} class="dj-up_a" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="#"{% else %} href="{{ item.url }}" class="dj-up_a" {% endif %}>
+<a tabindex="0" {% if item_mobile.items %} class="dj-up_a" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="#"{% else %} href="{{ item_mobile.url }}" class="dj-up_a" {% endif %}>
 {% if item_mobile.items %}
 {{ item_mobile.title }}
 {% else %} 
