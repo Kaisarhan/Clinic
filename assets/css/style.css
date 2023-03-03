@@ -3017,4 +3017,10 @@ margin-bottom:20px;
   .branchesBlog{
     margin: 2rem;
   }
-  
+  .webique_featured_link_title{
+    text-decoration: none;
+  }
+  a:hover, a:focus, a:active {
+    color: #ff1f39;
+    text-decoration: none;
+  }
