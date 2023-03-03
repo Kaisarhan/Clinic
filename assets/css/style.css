@@ -2998,7 +2998,16 @@ margin-bottom:20px;
   /* UIKit Common Class */
   
   .su-shortcodes-loaded .article-index > h3 { display: none; }
+  
+  
+  /* My Custom css */
   .full_width{
     width: 100%;
+  }
+  .servicesName{
+    padding: 3rem;
+  }
+  .servicesBlog{
+    margin: 2rem;
   }
   

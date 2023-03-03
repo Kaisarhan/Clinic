@@ -105,19 +105,12 @@ items:
             isExternal: '0'
     -
         title: Услуги
-        nesting: null
-        type: url
-        url: /uslugi
+        type: cms-page
         code: ''
-        reference: null
-        cmsPage: null
-        replace: null
+        reference: services
         viewBag:
             locale:
                 kz:
-                    title: ''
-                    url: ''
-                ru:
                     title: ''
                     url: ''
             isHidden: '0'
@@ -127,8 +120,10 @@ items:
         title: Отделения
         nesting: 0
         type: static-page
+        url: null
         code: ''
         reference: otdeleniya
+        cmsPage: null
         replace: 0
         viewBag:
             isHidden: '0'
