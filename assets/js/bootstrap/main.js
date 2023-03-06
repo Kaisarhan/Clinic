@@ -8,7 +8,7 @@
 jQuery(function ($) {
 
     // Stikcy Header
-    if ($('body').hasClass('sticky-header')) {
+/*     if ($('body').hasClass('sticky-header')) {
         var header = $('#sp-header');
 
         if($('#sp-header').length) {
@@ -34,7 +34,7 @@ jQuery(function ($) {
             var windowWidth = header.parent().outerWidth();
             header.css({"max-width": windowWidth, "left": "auto"});
         }
-    }
+    } */
 
     // go to top
     $(window).scroll(function () {

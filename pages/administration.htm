@@ -1,13 +1,15 @@
 title = "Администрация"
 url = "/administratrion"
 layout = "page"
+description = "Тут описание вашей страницы для Администраций"
 is_hidden = 0
 
 [blogPosts]
 pageNumber = "{{ :page }}"
+categoryFilter = "administrations"
 postsPerPage = 10
 noPostsMessage = "No posts found"
-sortOrder = "published_at desc"
+sortOrder = "created_at asc"
 categoryPage = 404
 postPage = 404
 ==
@@ -22,57 +24,17 @@ postPage = 404
       </figcaption>
     </figure>
   </div>
-
   <div class="branchesList d-flex justify-content-evenly flex-wrap">
-  {% for post in posts %}
-    <div class="card mb-3 branchesBlog" style="width: 540px;">
-      <div class="row g-0">
-        <div class="col-md-4">
-  {% for image in post.featured_images|slice(0.5) %}
-          <img src="{{ image.path }}" class="img-fluid rounded-start" alt="{{ post.title }}">
-  {% endfor %}
-        </div>
-        <div class="col-md-8">
-          <div class="card-body">
-            <h5 class="card-title">{{ post.title }}</h5>
-            <p class="card-text">{{ post.content_html|raw }}</p>
-          </div>
-        </div>
-      </div>
+{% for post in posts %}
+    <div class="card branchesBlog" style="width:300px">
+      {% for image in post.featured_images|slice(0.5) %}
+    <img class="card-img-top" src="{{ image.path }}" alt="{{ post.title }}" style="width:100%">
+      {% endfor %}  
+    <div class="card-body">
+      <h4 class="card-title">{{ post.title }}</h4>
+      <p class="card-text">{{ post.content_html|raw }}</p>
     </div>
-  {% endfor %}
+  </div>
+{% endfor %}  
   </div>
 </div>
-
-
-
-
-
-
-
-{# <div class="branches">
-    <div class="branchesName">
-      <figure class="text-center">
-        <blockquote class="blockquote">
-          <h1>{{ this.page.title }}</h1>
-        </blockquote>
-        <figcaption class="blockquote-footer">
-          <cite title="Source Title">{{ this.page.description }}</cite>
-        </figcaption>
-      </figure>
-    </div>
-  
-    <div class="branchesList d-flex justify-content-evenly flex-wrap">
-      {% for post in posts %}
-      <div class="card branchesBlog" style="width: 18rem;">
-      {% for image in post.featured_images|slice(0.5) %}
-        <img src="{{ image.path }}" class="card-img-top" alt="{{ post.title }}">
-      {% endfor %}
-        <div class="card-body">
-          <h4>{{ post.title }}</h4>
-          <p class="card-text">{{ post.content_html|raw }}</p>
-        </div>
-      </div>
-      {% endfor %}
-    </div>
-  </div> #}

@@ -11,31 +11,31 @@ postsPerPage = 10
 noPostsMessage = "No posts found"
 sortOrder = "published_at desc"
 categoryPage = 404
-postPage = 404
+postPage = "branchesPost"
 ==
 <div class="branches">
-    <div class="branchesName">
-      <figure class="text-center">
-        <blockquote class="blockquote">
-          <h1>{{ this.page.title }}</h1>
-        </blockquote>
-        <figcaption class="blockquote-footer">
-          <cite title="Source Title">{{ this.page.description }}</cite>
-        </figcaption>
-      </figure>
-    </div>
-  
-    <div class="branchesList d-flex justify-content-evenly flex-wrap">
-      {% for post in posts %}
-      <div class="card branchesBlog" style="width: 18rem;">
-      {% for image in post.featured_images|slice(0.5) %}
-        <img src="{{ image.path }}" class="card-img-top" alt="{{ post.title }}">
-      {% endfor %}
-        <div class="card-body">
-          <h4>{{ post.title }}</h4>
-          <p class="card-text">{{ post.content_html|raw }}</p>
-        </div>
-      </div>
-      {% endfor %}
-    </div>
+  <div class="branchesName">
+    <figure class="text-center">
+      <blockquote class="blockquote">
+        <h1>{{ this.page.title }}</h1>
+      </blockquote>
+      <figcaption class="blockquote-footer">
+        <cite title="Source Title">{{ this.page.description }}</cite>
+      </figcaption>
+    </figure>
   </div>
+  <div class="branchesList d-flex justify-content-evenly flex-wrap">
+        {% for post in posts %}
+    <div class="card branchesBlog" style="width: 18rem;">
+        {% for image in post.featured_images|slice(0.5) %}
+    <img src="{{ image.path }}" class="card-img-top" alt="{{ post.title }}">
+        {% endfor %}
+      <div class="card-body">
+        <h5 class="card-title">{{ post.title }}</h5>
+        <p class="card-text">{{ post.excerpt }}</p>
+        <a href="{{ post.url }}" class="btn btn-primary">Подробнее</a>
+      </div>
+    </div>
+        {% endfor %}
+  </div>
+</div>

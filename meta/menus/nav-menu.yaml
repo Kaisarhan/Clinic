@@ -35,20 +35,13 @@ items:
         items:
             -
                 title: Новости
-                nesting: 0
-                type: blog-category
-                url: null
+                type: cms-page
                 code: ''
-                reference: '3'
-                cmsPage: news
-                replace: 0
+                reference: news
                 viewBag:
                     locale:
                         kz:
                             title: Жаналык
-                            url: ''
-                        ru:
-                            title: ''
                             url: ''
                     isHidden: '0'
                     cssClass: ''
@@ -139,9 +132,13 @@ items:
             isExternal: '0'
     -
         title: Администрация
+        nesting: null
         type: cms-page
+        url: null
         code: ''
         reference: administration
+        cmsPage: null
+        replace: null
         viewBag:
             isHidden: '0'
             cssClass: ''
