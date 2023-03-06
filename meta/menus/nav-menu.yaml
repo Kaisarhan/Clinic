@@ -122,14 +122,27 @@ items:
             isExternal: '0'
     -
         title: Отделения
+        nesting: null
         type: cms-page
+        url: null
         code: ''
         reference: branches
+        cmsPage: null
+        replace: null
         viewBag:
             locale:
                 kz:
                     title: ''
                     url: ''
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Администрация
+        type: cms-page
+        code: ''
+        reference: administration
+        viewBag:
             isHidden: '0'
             cssClass: ''
             isExternal: '0'
