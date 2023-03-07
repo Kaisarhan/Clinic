@@ -8,12 +8,18 @@ is_hidden = 0
 slug = "{{ :slug }}"
 categoryPage = "branchesPost"
 ==
+
+function onStart()
+{
+    $this->page["myVar"] = "Hello World!";
+}
+==
 <div class="jumbotron title-js">
     <div class="container">
         <div class="row">
             <div class="col-8">
                 <h1>{{ post.title }}</h1>
-                <p>{{ this.page.description }}</p>
+                <p>{{ this.page.description }} {# {{ this.page.myVar }} Вывод значение или переменной  #}</p>
             </div>
         </div>
     </div>

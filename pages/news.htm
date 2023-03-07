@@ -6,7 +6,7 @@ is_hidden = 0
 [blogPosts]
 pageNumber = "{{ :page }}"
 categoryFilter = "all-news"
-postsPerPage = 10
+postsPerPage = 2
 noPostsMessage = "No posts found"
 sortOrder = "published_at desc"
 categoryPage = "news"
@@ -37,7 +37,31 @@ forceUrl = 0
     </span>
   </div>
 </div>
+    
 {% endfor %}
         </div>
     </div>
+
+
+------------
+<nav>
+  <ul class="pagination">
+      <li class="disabled" aria-disabled="true" aria-label="pagination.previous">
+        <span aria-hidden="true">‹</span>
+      </li>
+      <li class="active" aria-current="page">
+        <span>1</span>
+      </li>
+      <li>
+        <a href="http://clinic.loc/news?page=2">2</a>
+      </li>
+      <li>
+        <a href="http://clinic.loc/news?page=2" rel="next" aria-label="pagination.next">›</a>
+      </li>
+  </ul>
+</nav>
+----------
+{{ posts.render|raw }}
+
+
 </section>
