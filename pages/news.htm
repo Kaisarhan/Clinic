@@ -5,7 +5,7 @@ is_hidden = 0
 
 [blogPosts]
 pageNumber = "{{ :page }}"
-categoryFilter = "all-news"
+categoryFilter = "all-news"    
 postsPerPage = 2
 noPostsMessage = "No posts found"
 sortOrder = "published_at desc"
@@ -21,47 +21,24 @@ forceUrl = 0
 ==
 {% set posts = blogPosts.posts%}
 <section id="sp-main-body">
-    <div class="container">
-        <div class="container-inner d-flex justify-content-around flex-wrap">
-{% for post in posts %}
-<div class="card align-self-center mb-2" style="width: 22rem;">
-{% for image in post.featured_images|slice(0.5) %}
-  <img src="{{ image.path }}" class="card-img-top" alt="{{ post.title }}">
-{% endfor %}
-  <div class="card-body">
-    <h5 class="card-title">{{ post.title }}</h5>
-    <p class="card-text">{{ post.excerpt }}</p>
-    <a href="{{ post.url }}" class="btn btn-primary">Подробнее</a>
-    <span class="published" title="Опубликовано: {{ post.published_at|date('d-m-Y') }}">
-        <time datetime="{{ post.published_at|date('d-m-Y') }}">{{ post.published_at|date('d-m-Y') }} </time>
-    </span>
-  </div>
-</div>
-    
-{% endfor %}
+  <div class="container">
+    <div class="container-inner d-flex justify-content-around flex-wrap">
+              {% for post in posts %}
+        <div class="card align-self-center mb-2" style="width: 22rem;">
+              {% for image in post.featured_images|slice(0.5) %}
+        <img src="{{ image.path }}" class="card-img-top" alt="{{ post.title }}">
+              {% endfor %}
+          <div class="card-body">
+            <h5 class="card-title">{{ post.title }}</h5>
+            <p class="card-text">{{ post.excerpt }}</p>
+            <a href="{{ post.url }}" class="btn btn-primary">{{'Подробнее'|_}}</a>
+            <span class="published" title="{{'Опубликовано:'|_}} {{ post.published_at|date('d-m-Y') }}">
+                <time datetime="{{ post.published_at|date('d-m-Y') }}">{{ post.published_at|date('d-m-Y') }} </time>
+            </span>
+          </div>
         </div>
+              {% endfor %}
     </div>
-
-
-------------
-<nav>
-  <ul class="pagination">
-      <li class="disabled" aria-disabled="true" aria-label="pagination.previous">
-        <span aria-hidden="true">‹</span>
-      </li>
-      <li class="active" aria-current="page">
-        <span>1</span>
-      </li>
-      <li>
-        <a href="http://clinic.loc/news?page=2">2</a>
-      </li>
-      <li>
-        <a href="http://clinic.loc/news?page=2" rel="next" aria-label="pagination.next">›</a>
-      </li>
-  </ul>
-</nav>
-----------
-{{ posts.render|raw }}
-
-
+  </div>
+          {% partial 'pagination' %}
 </section>

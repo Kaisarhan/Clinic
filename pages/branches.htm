@@ -33,7 +33,7 @@ postPage = "branchesPost"
       <div class="card-body">
         <h5 class="card-title">{{ post.title }}</h5>
         <p class="card-text">{{ post.excerpt }}</p>
-        <a href="{{ post.url }}" class="btn btn-primary">Подробнее</a>
+        <a href="{{ post.url }}" class="btn btn-primary">{{ 'Подробнее'|_ }}</a>
       </div>
     </div>
         {% endfor %}

@@ -1,50 +1,5 @@
 [viewBag]
 ==
-{#<div class="navbar-collapse collapse">
-    <ul class="{{ class }}">
-    {% for item in staticMenu.menuItems %}
-        <li class="{{ item.isActive or item.isChildActive ? 'active' : '' }} {{ item.staticMenu.menuItems ? 'dropdown' : '' }}">
-            <a {% if item.staticMenu.menuItems %}class="dropdown-toggle" data-toggle="dropdown"{% endif %} href="{{ item.url }}">
-                {{ item.title }}
-                {% if item.staticMenu.menuItems %}
-                    <span class="caret"></span>
-                {% endif %}
-            </a>
-            {% if item.staticMenu.menuItems %}
-                {% partial 'menu-items' items=item.staticMenu.menuItems class='dropdown-menu' %}
-            {% endif %}
-        </li>
-    {% endfor %}
-    </ul>
-</div>#}
-
-{#<ul class="{{ class }}">
-    {% for item in staticMenu.menuItems %}
-        <li class="{{ item.isActive or item.isChildActive ? 'active' : '' }} {{ item.items ? 'dropdown' : '' }}">
-            <a {% if item.items %}class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" id="navbarDropdownMenuLink" {% endif %} href="{{ item.url }}">
-                {{ item.title }}
-                {% if item.items %} <span class="caret"></span> {% endif %}
-            </a>
-
-            {% if item.items %}
-                {#{% partial 'menu-items' items=item.items class='dropdown-menu' %}#}
-
-        {#<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-       
-            {% if item.items %}
-          <a class="dropdown-item" href="{{  item.url }}">{{ item.title }}</a>
-            {% endif %}
-   
-        </div>
-
-            {% endif %}
-        </li>
-    {% endfor %}
-{#</ul>#}
-
 <ul class="nav navbar-nav navbar-right">
 {% for item in staticMenu.menuItems %} 
     <li class="{{ item.isActive or item.isChildActive ? 'active' : '' }}  {{ item.items ? 'dropdown' : '' }}">

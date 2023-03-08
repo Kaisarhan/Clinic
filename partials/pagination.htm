@@ -1,0 +1,59 @@
+{# <div class="NewsPagination">
+            {% if posts.hasPages %}
+    <ul class="pagination">
+        <li>
+            {% if posts.currentPage > 1 %}
+                <a href="{{ posts.previousPageUrl }}" rel="prev">«</a>
+            {% else %}
+                <span class="disabled">«</span>
+            {% endif %}
+        </li>
+
+            {% for page in range(1, posts.lastPage) %}
+            <li {{ posts.currentPage == page ? 'class="active"' }}>
+                <a href="{{ posts.url(page) }}">{{ page }}</a>
+            </li>
+            {% endfor %}
+
+        <li>
+            {% if posts.hasMorePages %}
+                <a href="{{ posts.nextPageUrl }}" rel="next">»</a>
+            {% else %}
+                <span class="disabled">»</span>
+            {% endif %}
+        </li>
+    </ul>
+            {% endif %}
+</div> #}
+
+
+<nav aria-label="Page navigation example">
+{% if posts.hasPages %}
+  <ul class="pagination justify-content-center">
+  {% if posts.currentPage > 1 %}
+    <li class="page-item">
+      <a class="page-link" href="{{ posts.previousPageUrl }}" tabindex="-1" aria-disabled="true">{{'Пред...'|_}}</a>
+    </li>
+  {% else %}
+    <li class="page-item disabled">
+      <a class="page-link" href="{{ posts.previousPageUrl }}" tabindex="-1" aria-disabled="true">{{'Пред...'|_}}</a>
+    </li>
+  {% endif %}
+
+    {% for page in range(1, posts.lastPage) %}
+    <li {{ posts.currentPage == page ? 'class="page-item active"' }}>
+        <a class="page-link" href="{{ posts.url(page) }}">{{ page }}</a>
+    </li>
+    {% endfor %}
+{% if posts.hasMorePages %}
+    <li class="page-item">
+      <a class="page-link" href="{{ posts.nextPageUrl }}">{{'След...'|_}}</a>
+    </li>
+{% else %}
+    <li class="page-item disabled">
+      <a class="page-link" href="{{ posts.nextPageUrl }}">{{'След...'|_}}</a>
+    </li>
+{% endif %}
+  </ul>
+  {% endif %}
+</nav>
