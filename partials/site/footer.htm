@@ -1,3 +1,12 @@
+==
+<?php
+function onStart()
+{
+    $this['LogoURLFooter'] = Backend::url('/cms/themeoptions/update/SKK');
+    $this['ContactURL'] = Backend::url('/cms/themeoptions/update/SKK#primarytab-contact');
+}
+?>
+==
 <footer id="sp-footer">
     <div class="container">
         <div class="container-inner">
@@ -10,7 +19,7 @@
     {% if this.theme.logo_button|length > 0 %}
                                     <p><a href="{{ 'home'|page }}"><img src="{{ this.theme.logo_button|media }}" alt=""></a></p>
     {% else %}
-                                    <p><a href="{{ backendUrl }}">Укжите свой лого в Backend</a></p>
+                                    <p><a href="{{ LogoURLFooter }}">Укжите свой лого в Backend</a></p>
     {% endif %}
                                 </div>
                             </div>
@@ -68,8 +77,8 @@
                                         </p>
                                         <p style="font-size: 20px;">{{ this.theme.contact_number }}</p>
                                         <p style="font-size: 20px;">{{ this.theme.contact_number2 }}</p>
-                                        <h5><a style="font-size: 14px;"
-                                                href="mailto:{{ this.theme.contact_mail }}">{{ this.theme.contact_mail }}</a>
+                                        <h5>
+                                            <a style="font-size: 14px;" href="mailto:{{ this.theme.contact_mail }}">{{ this.theme.contact_mail }}</a>
                                         </h5>
                                     </div>
                                 </div>

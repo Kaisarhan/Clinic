@@ -3,7 +3,7 @@
 <?php
 function onStart()
 {
-    $this['backendUrl'] = Backend::url('/');
+    $this['LogoURLHeader'] = Backend::url('/cms/themeoptions/update/SKK');
 }
 ?>
 ==
@@ -29,7 +29,7 @@ function onStart()
                     </div>
     {% else %}
                     <div class="sp-column text-center text-lg-center">
-                        <a href="{{ backendUrl }}">Укажите свой лого в backend</a>
+                        <a href="{{ LogoURLHeader }}">Укажите свой лого в backend</a>
                     </div>
     {% endif %}
                 </div>
