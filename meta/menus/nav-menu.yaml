@@ -34,25 +34,12 @@ items:
             isExternal: '0'
         items:
             -
-                title: Новости
-                type: cms-page
-                code: ''
-                reference: news
-                viewBag:
-                    locale:
-                        kz:
-                            title: Жаналык
-                            url: ''
-                    isHidden: '0'
-                    cssClass: ''
-                    isExternal: '0'
-            -
-                title: Галерея
+                title: Услуги
                 nesting: null
-                type: url
-                url: /galerey
+                type: cms-page
+                url: null
                 code: ''
-                reference: null
+                reference: services
                 cmsPage: null
                 replace: null
                 viewBag:
@@ -60,8 +47,22 @@ items:
                         kz:
                             title: ''
                             url: ''
-                        ru:
-                            title: ''
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Новости
+                nesting: null
+                type: cms-page
+                url: null
+                code: ''
+                reference: news
+                cmsPage: null
+                replace: null
+                viewBag:
+                    locale:
+                        kz:
+                            title: Жаналык
                             url: ''
                     isHidden: '0'
                     cssClass: ''
@@ -73,36 +74,6 @@ items:
         url: null
         code: ''
         reference: gos-zakup
-        cmsPage: null
-        replace: null
-        viewBag:
-            locale:
-                kz:
-                    title: ''
-                    url: ''
-            isHidden: '0'
-            cssClass: ''
-            isExternal: '0'
-    -
-        title: Контакты
-        nesting: null
-        type: cms-page
-        url: null
-        code: ''
-        reference: contactform
-        cmsPage: null
-        replace: null
-        viewBag:
-            isHidden: '0'
-            cssClass: ''
-            isExternal: '0'
-    -
-        title: Услуги
-        nesting: null
-        type: cms-page
-        url: null
-        code: ''
-        reference: services
         cmsPage: null
         replace: null
         viewBag:

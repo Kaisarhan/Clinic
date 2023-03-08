@@ -1,0 +1,9 @@
+[viewBag]
+==
+<ul class="lang-inline">
+{% for code, name in locales %}
+    <li dir="ltr" {{ code == activeLocale ? 'class="lang-active"' }}>
+        <a href="#" data-request="onSwitchLocale" data-request-data="locale: '{{ code }}'">{{ name }}</a>
+    </li>
+{% endfor %}
+</ul>
