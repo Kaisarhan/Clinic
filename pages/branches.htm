@@ -25,7 +25,7 @@ postPage = "branchesPost"
     </figure>
   </div>
   <div class="branchesList d-flex justify-content-evenly flex-wrap">
-        {% for post in posts %}
+   {#      {% for post in posts %}
     <div class="card branchesBlog" style="width: 18rem;">
         {% for image in post.featured_images|slice(0.5) %}
     <img src="{{ image.path }}" class="card-img-top" alt="{{ post.title }}">
@@ -36,6 +36,25 @@ postPage = "branchesPost"
         <a href="{{ post.url }}" class="btn btn-primary">{{ 'Подробнее'|_ }}</a>
       </div>
     </div>
-        {% endfor %}
+        {% endfor %} #}
+    {% for post in posts %}
+      <div class="card mb-3" style="max-width: 72rem;">
+        <div class="row g-0">
+          <div class="col-md-4">
+          {% for image in post.featured_images|slice(0.5) %}
+            <img src="{{ image.path }}" class="img-fluid rounded-start" alt="{{ post.title }}">
+          {% endfor %}
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">{{ post.title }}</h5>
+              <p class="card-text">Это более широкая карта с вспомогательным текстом ниже в качестве естественного перехода к дополнительному контенту. Этот контент немного длиннее.</p>
+              <p class="card-text"><small class="text-muted">{{ post.published_at|date('Y-m-d') }}</small></p>
+              <a href="{{ post.url }}" class="btn btn-primary">{{ 'Подробнее'|_ }}</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
   </div>
 </div>

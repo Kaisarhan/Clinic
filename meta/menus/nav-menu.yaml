@@ -67,6 +67,19 @@ items:
                     isHidden: '0'
                     cssClass: ''
                     isExternal: '0'
+            -
+                title: Вакансий
+                type: cms-page
+                code: ''
+                reference: Vacancies
+                viewBag:
+                    locale:
+                        kz:
+                            title: ''
+                            url: ''
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
     -
         title: Гос.Закуп
         nesting: null
