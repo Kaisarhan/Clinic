@@ -1,9 +1,9 @@
-title = "contactForm"
-url = "/contactform"
+title = "Контакты"
+url = "/contacts"
 layout = "page"
 is_hidden = 0
 ==
-<section id="sp-main-body">
+{#<section id="sp-main-body">
     <div class="container">
         <div class="container-inner">
             <div class="row">
@@ -41,4 +41,17 @@ is_hidden = 0
             </div>
         </div>
     </div>
-</section>
+</section>#}
+<div class="services">
+  <div class="servicesName">
+    <figure class="text-center">
+      <blockquote class="blockquote">
+        <h1>{{ this.page.title }}</h1>
+      </blockquote>
+      <figcaption class="blockquote-footer">
+        <cite title="Source Title">{{ this.page.description }}</cite>
+      </figcaption>
+    </figure>
+  </div>
+  {% content "osms" %}
+</div>

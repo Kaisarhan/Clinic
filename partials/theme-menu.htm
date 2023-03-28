@@ -9,19 +9,27 @@
                 <span class="dj-drop">{{ item.title }}</span>
 {% endif %}
             </a>
-            <div class="dj-subwrap  multiple_cols subcols3" style="">
-                <div class="dj-subwrap-in">
-                    <div class="dj-subcol" style="width:250px">
-    <ul class="dj-submenu">
+            <div class="dj-subwrap  multiple_cols subcols3" style="display: none;">
+                <div class="dj-subwrap-in" style="width:450px;">
+
+                    <div class="dj-subcol">
+                        <ul class="dj-submenu" style="width:500px;
+    display: flex;
+	flex-flow: wrap;
+    {# max-height: 250px; #}
+    {# justify-content: space-around; #}">
 {% for subitem in item.items %} 
-        <li class="itemid109 first">
-            <a href="{{ subitem.url }}">
-                {{ subitem.title }}
-            </a>
-        </li>
+                            <li class="itemid109" style="width: 200px;
+    margin: 0rem 0.5rem 0rem 0.5rem;">
+                                <a href="{{ subitem.url }}">
+                                    {{ subitem.title }}
+                                </a>
+                            </li>
 {% endfor %}
                         </ul>
-                    </div>                    
+                    </div>
+
+
                             <div style="clear:both;height:0"></div> 
                 </div>
             </div>

@@ -34,6 +34,40 @@ items:
             isExternal: '0'
         items:
             -
+                title: 'О медицинской организации'
+                nesting: null
+                type: url
+                url: '#'
+                code: ''
+                reference: null
+                cmsPage: null
+                replace: null
+                viewBag:
+                    locale:
+                        kz:
+                            title: ''
+                            url: ''
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Гос.Закуп
+                nesting: null
+                type: cms-page
+                url: null
+                code: ''
+                reference: gos-zakup
+                cmsPage: null
+                replace: null
+                viewBag:
+                    locale:
+                        kz:
+                            title: ''
+                            url: ''
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
                 title: Услуги
                 nesting: null
                 type: cms-page
@@ -47,6 +81,19 @@ items:
                         kz:
                             title: ''
                             url: ''
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Администрация
+                nesting: null
+                type: cms-page
+                url: null
+                code: ''
+                reference: administration
+                cmsPage: null
+                replace: null
+                viewBag:
                     isHidden: '0'
                     cssClass: ''
                     isExternal: '0'
@@ -69,9 +116,13 @@ items:
                     isExternal: '0'
             -
                 title: Вакансий
+                nesting: null
                 type: cms-page
+                url: null
                 code: ''
                 reference: Vacancies
+                cmsPage: null
+                replace: null
                 viewBag:
                     locale:
                         kz:
@@ -80,23 +131,142 @@ items:
                     isHidden: '0'
                     cssClass: ''
                     isExternal: '0'
-    -
-        title: Гос.Закуп
-        nesting: null
-        type: cms-page
-        url: null
-        code: ''
-        reference: gos-zakup
-        cmsPage: null
-        replace: null
-        viewBag:
-            locale:
-                kz:
-                    title: ''
-                    url: ''
-            isHidden: '0'
-            cssClass: ''
-            isExternal: '0'
+            -
+                title: 'Лицензии и сертификаты'
+                nesting: null
+                type: url
+                url: '#'
+                code: ''
+                reference: null
+                cmsPage: null
+                replace: null
+                viewBag:
+                    locale:
+                        kz:
+                            title: ''
+                            url: ''
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Отзывы
+                nesting: null
+                type: url
+                url: '#'
+                code: ''
+                reference: null
+                cmsPage: null
+                replace: null
+                viewBag:
+                    locale:
+                        kz:
+                            title: ''
+                            url: ''
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'СМИ о нас'
+                nesting: null
+                type: url
+                url: '#'
+                code: ''
+                reference: null
+                cmsPage: null
+                replace: null
+                viewBag:
+                    locale:
+                        kz:
+                            title: ''
+                            url: ''
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Этический кодекс медицинского работника'
+                nesting: null
+                type: url
+                url: '#'
+                code: ''
+                reference: null
+                cmsPage: null
+                replace: null
+                viewBag:
+                    locale:
+                        kz:
+                            title: ''
+                            url: ''
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Противодействие коррупции'
+                nesting: null
+                type: url
+                url: '#'
+                code: ''
+                reference: null
+                cmsPage: null
+                replace: null
+                viewBag:
+                    locale:
+                        kz:
+                            title: ''
+                            url: ''
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Нормативно-правовые акты'
+                nesting: null
+                type: url
+                url: '#'
+                code: ''
+                reference: null
+                cmsPage: null
+                replace: null
+                viewBag:
+                    locale:
+                        kz:
+                            title: ''
+                            url: ''
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Корпоративное управление'
+                nesting: null
+                type: url
+                url: '#'
+                code: ''
+                reference: null
+                cmsPage: null
+                replace: null
+                viewBag:
+                    locale:
+                        kz:
+                            title: ''
+                            url: ''
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Финансовая отчетность'
+                nesting: null
+                type: url
+                url: '#'
+                code: ''
+                reference: null
+                cmsPage: null
+                replace: null
+                viewBag:
+                    locale:
+                        kz:
+                            title: ''
+                            url: ''
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
     -
         title: Отделения
         nesting: null
@@ -115,15 +285,254 @@ items:
             cssClass: ''
             isExternal: '0'
     -
-        title: Администрация
+        title: Пациентам
         nesting: null
-        type: cms-page
-        url: null
+        type: url
+        url: '#'
         code: ''
-        reference: administration
+        reference: null
         cmsPage: null
         replace: null
         viewBag:
+            locale:
+                kz:
+                    title: ''
+                    url: ''
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+        items:
+            -
+                title: ГОБМП
+                nesting: null
+                type: cms-page
+                url: null
+                code: ''
+                reference: main/gobmp
+                cmsPage: null
+                replace: null
+                viewBag:
+                    locale:
+                        kz:
+                            title: ''
+                            url: ''
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Права и обязанности лиц в области здравоохранения'
+                nesting: null
+                type: url
+                url: '#'
+                code: ''
+                reference: null
+                cmsPage: null
+                replace: null
+                viewBag:
+                    locale:
+                        kz:
+                            title: ''
+                            url: ''
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Отдел СПП и внутренней экспертизы'
+                nesting: null
+                type: url
+                url: '#'
+                code: ''
+                reference: null
+                cmsPage: null
+                replace: null
+                viewBag:
+                    locale:
+                        kz:
+                            title: ''
+                            url: ''
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Полезная информация'
+                nesting: null
+                type: url
+                url: '#'
+                code: ''
+                reference: null
+                cmsPage: null
+                replace: null
+                viewBag:
+                    locale:
+                        kz:
+                            title: ''
+                            url: ''
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Прейскурант цен по платным услугам'
+                nesting: null
+                type: url
+                url: '#'
+                code: ''
+                reference: null
+                cmsPage: null
+                replace: null
+                viewBag:
+                    locale:
+                        kz:
+                            title: ''
+                            url: ''
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Блог директора'
+                nesting: null
+                type: url
+                url: '#'
+                code: ''
+                reference: null
+                cmsPage: null
+                replace: null
+                viewBag:
+                    locale:
+                        kz:
+                            title: ''
+                            url: ''
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Часто задаваемые вопросы'
+                nesting: null
+                type: url
+                url: '#'
+                code: ''
+                reference: null
+                cmsPage: null
+                replace: null
+                viewBag:
+                    locale:
+                        kz:
+                            title: ''
+                            url: ''
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Порядок оказания стационарной помощи'
+                nesting: null
+                type: url
+                url: '#'
+                code: ''
+                reference: null
+                cmsPage: null
+                replace: null
+                viewBag:
+                    locale:
+                        kz:
+                            title: ''
+                            url: ''
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Обязательное социальное медицинское страхование'
+                nesting: null
+                type: cms-page
+                url: null
+                code: ''
+                reference: main/osms
+                cmsPage: null
+                replace: null
+                viewBag:
+                    locale:
+                        kz:
+                            title: ''
+                            url: ''
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Результаты исследований онлайн'
+                nesting: null
+                type: url
+                url: '#'
+                code: ''
+                reference: null
+                cmsPage: null
+                replace: null
+                viewBag:
+                    locale:
+                        kz:
+                            title: ''
+                            url: ''
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Будущим мамам'
+                nesting: null
+                type: url
+                url: '#'
+                code: ''
+                reference: null
+                cmsPage: null
+                replace: null
+                viewBag:
+                    locale:
+                        kz:
+                            title: ''
+                            url: ''
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Перечень государственных услуг в области здравоохранения'
+                nesting: null
+                type: url
+                url: '#'
+                code: ''
+                reference: null
+                cmsPage: null
+                replace: null
+                viewBag:
+                    locale:
+                        kz:
+                            title: ''
+                            url: ''
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Государственные символы РК'
+                nesting: null
+                type: url
+                url: '#'
+                code: ''
+                reference: null
+                cmsPage: null
+                replace: null
+                viewBag:
+                    locale:
+                        kz:
+                            title: ''
+                            url: ''
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+    -
+        title: Контакты
+        type: cms-page
+        code: ''
+        reference: main/contacts
+        viewBag:
+            locale:
+                kz:
+                    title: ''
+                    url: ''
             isHidden: '0'
             cssClass: ''
             isExternal: '0'
