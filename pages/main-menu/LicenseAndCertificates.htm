@@ -2,6 +2,15 @@ title = "Лицензии и сертификаты"
 url = "/LicenseAndCertificates"
 layout = "page"
 is_hidden = 0
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+categoryFilter = "license-and-sertificate"
+postsPerPage = 10
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = 404
+postPage = 404
 ==
 <div class="services">
   <div class="servicesName">
@@ -14,5 +23,25 @@ is_hidden = 0
       </figcaption>
     </figure>
   </div>
-  {% content "main-menu/LicenseAndCertificates" %}
+{#   {% content "main-menu/LicenseAndCertificates" %} #}
 </div>
+
+{% set posts = blogPosts.posts%}
+<section id="sp-main-body">
+	<div class="container">
+{# 		<div class="container-inner"> #}
+			<main id="sp-component" class="col-lg-12 d-flex justify-content-around flex-wrap" role="main">
+				
+            		{% for post in posts %}
+            		<div class="card text-center" style="margin: 1rem;" >
+            		  <div class="card-body">
+            		    <h5 class="card-title">{{ post.title }}</h5>
+            		    <p class="card-text">{{ post.content_html|raw }}</p>
+            		  </div>
+            		</div>
+            		{% endfor %}	
+			
+			</main>
+		{# </div> #}
+	</div>
+</section>

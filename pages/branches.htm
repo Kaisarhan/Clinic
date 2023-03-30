@@ -48,8 +48,8 @@ postPage = "branchesPost"
           <div class="col-md-8">
             <div class="card-body">
               <h5 class="card-title">{{ post.title }}</h5>
-              <p class="card-text">Это более широкая карта с вспомогательным текстом ниже в качестве естественного перехода к дополнительному контенту. Этот контент немного длиннее.</p>
-              <p class="card-text"><small class="text-muted">{{ post.published_at|date('Y-m-d') }}</small></p>
+              <p class="card-text">{{ post.excerpt }}</p>
+              {# <p class="card-text"><small class="text-muted">{{ post.published_at|date('Y-m-d') }}</small></p> #}
               <a href="{{ post.url }}" class="btn btn-primary">{{ 'Подробнее'|_ }}</a>
             </div>
           </div>
