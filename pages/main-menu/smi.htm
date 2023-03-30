@@ -2,6 +2,15 @@ title = "СМИ о нас"
 url = "/smi"
 layout = "page"
 is_hidden = 0
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+categoryFilter = "smi"
+postsPerPage = 10
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = 404
+postPage = 404
 ==
 <div class="services">
   <div class="servicesName">
@@ -14,5 +23,26 @@ is_hidden = 0
       </figcaption>
     </figure>
   </div>
-  {% content "main-menu/smi" %}
+  {#{% content "main-menu/smi" %}#}
+</div>
+<div class="container d-flex justify-content-evenly flex-wrap">
+  {% set posts = blogPosts.posts %}
+  {% for post in posts %}
+  <div class="card mb-3 align-self-start" style="max-width: 540px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+      {% for image in post.featured_images|slice(0.5) %}
+        <img src="{{ image.path }}" class="img-fluid rounded-start" style="width: 100%%; height: 100%;" alt="{{ post.title }}">
+        {% endfor %}
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">{{ post.title }}</h5>
+          <p class="card-text">{{ post.content_html|raw }}</p>
+          <p class="card-text"><small class="text-muted">Последнее обновление {{ post.published_at|date('d.m.Y') }}</small></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
 </div>

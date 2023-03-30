@@ -2,7 +2,20 @@ title = "Полезная информация"
 url = "/poleznaya-informaciya"
 layout = "page"
 is_hidden = 0
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+categoryFilter = "poleznaya-informaciya"
+postsPerPage = 10
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "main-menu/information"
+postPage = "main-menu/information-post"
+
+[localePicker]
+forceUrl = 0
 ==
+{% set posts = blogPosts.posts%}
 <div class="services">
   <div class="servicesName">
     <figure class="text-center">
@@ -16,4 +29,36 @@ is_hidden = 0
   </div>
   {#{% content "main-menu/poloz" %}#}
 </div>
-<h1>Разработать категорию, блог для этой страницы</h1>
+
+
+<div class="container">
+  <div class="blog">
+    <div class="article-list">
+      <div class="row">
+{% for post in posts %}
+        <div class="col-md-6">
+          <div class="article " itemprop="blogPost" itemscope="">
+            <div class="article-intro-image float-left">
+              <a href="{{ post.url }}">
+              {% for image in post.featured_images|slice(0.5) %}
+                <img src="{{ image.path }}" alt="{{ post.title }}">
+              {% endfor %}
+              </a>
+            </div>
+            <div class="article-body">
+              <div class="article-header">
+                <h2><a href="{{ post.url }}">{{ post.excerpt }}</a></h2>
+              </div>  
+              <div class="article-introtext">
+                <div class="jcomments-links">
+                  <a class="readmore-link" href="{{ post.url }}" title="{{ post.title }}">{{'Подробнее:'|_}} {{ post.excerpt }}</a>  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+{% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
