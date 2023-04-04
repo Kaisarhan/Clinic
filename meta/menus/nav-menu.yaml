@@ -142,10 +142,18 @@ items:
                     isExternal: '0'
             -
                 title: 'Отзывы#'
-                type: url
-                url: '#'
+                nesting: null
+                type: cms-page
+                url: null
                 code: ''
+                reference: main-menu2/reviews
+                cmsPage: null
+                replace: null
                 viewBag:
+                    locale:
+                        kz:
+                            title: ''
+                            url: ''
                     isHidden: '0'
                     cssClass: ''
                     isExternal: '0'
@@ -164,13 +172,21 @@ items:
                     isExternal: '0'
             -
                 title: 'Этический кодекс медицинского работника#'
+                nesting: null
                 type: url
-                url: '#'
+                url: 'http://winter.loc/storage/app/media/uploaded-files/%D0%9E%D0%BD%D0%B0%D0%B5%D0%B2%D0%B0.pdf'
                 code: ''
+                reference: null
+                cmsPage: null
+                replace: null
                 viewBag:
+                    locale:
+                        kz:
+                            title: ''
+                            url: ''
                     isHidden: '0'
                     cssClass: ''
-                    isExternal: '0'
+                    isExternal: '1'
             -
                 title: 'Противодействие коррупции'
                 nesting: null
@@ -329,10 +345,18 @@ items:
                     isExternal: '0'
             -
                 title: 'Блог директора#'
-                type: url
-                url: '#'
+                nesting: null
+                type: cms-page
+                url: null
                 code: ''
+                reference: main-menu2/blog-dir
+                cmsPage: null
+                replace: null
                 viewBag:
+                    locale:
+                        kz:
+                            title: ''
+                            url: ''
                     isHidden: '0'
                     cssClass: ''
                     isExternal: '0'
@@ -350,11 +374,15 @@ items:
                     cssClass: ''
                     isExternal: '0'
             -
-                title: 'Порядок оказания стационарной помощи#'
-                type: url
-                url: '#'
+                title: 'Порядок оказания стационарной помощи'
+                type: cms-page
                 code: ''
+                reference: main-menu/posp
                 viewBag:
+                    locale:
+                        kz:
+                            title: ''
+                            url: ''
                     isHidden: '0'
                     cssClass: ''
                     isExternal: '0'
@@ -377,9 +405,13 @@ items:
                     isExternal: '0'
             -
                 title: 'Результаты исследований онлайн#'
+                nesting: null
                 type: url
                 url: '#'
                 code: ''
+                reference: null
+                cmsPage: null
+                replace: null
                 viewBag:
                     isHidden: '0'
                     cssClass: ''

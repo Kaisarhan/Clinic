@@ -1,43 +1,35 @@
-<div class="dj-megamenu-wrapper">
+{# <div class="dj-megamenu-wrapper">
     <ul id="dj-megamenu99" class="dj-megamenu dj-megamenu-default horizontalMenu" data-options='{"wrap":null,"animIn":"fadeInDown","animOut":"fadeOutUp","animSpeed":"fast","openDelay":"250","closeDelay":"500","event":"mouseenter","fixed":"0","offset":"0","theme":"default","direction":"ltr","wcag":"1"}' data-trigger="979">
-{% for item in staticMenu.menuItems %} 
-        <li class="dj-up {{ item.isActive or item.isChildActive ? 'first active' : '' }}  {{ item.items ? 'dropdown' : '' }}">
-            <a tabindex="0" {% if item.items %} class="dj-up_a" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="#"{% else %} href="{{ item.url }}" class="dj-up_a" {% endif %}>
-{% if item.items %} 
-                <span class="dj-drop">{{ item.title }}</span>
-{% else %} 
-                <span class="dj-drop">{{ item.title }}</span>
-{% endif %}
-            </a>
-            <div class="dj-subwrap  multiple_cols subcols3" style="display: none;">
-                <div class="dj-subwrap-in" style="width:450px;">
-
-                    <div class="dj-subcol">
-                        <ul class="dj-submenu" style="width:500px;
-    display: flex;
-	flex-flow: wrap;
-    {# max-height: 250px; #}
-    {# justify-content: space-around; #}">
-{% for subitem in item.items %} 
-                            <li class="itemid109" style="width: 200px;
-    margin: 0rem 0.5rem 0rem 0.5rem;">
-                                <a href="{{ subitem.url }}">
-                                    {{ subitem.title }}
-                                </a>
-                            </li>
-{% endfor %}
-                        </ul>
-                    </div>
-
-
+        {% for item in staticMenu.menuItems %} 
+            <li class="dj-up {{ item.isActive or item.isChildActive ? 'first active' : '' }}  {{ item.items ? 'dropdown' : '' }}">
+                <a tabindex="0" {% if item.items %} class="dj-up_a" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="#"{% else %} href="{{ item.url }}" class="dj-up_a" {% endif %}>
+            {% if item.items %} 
+                    <span class="dj-drop">{{ item.title }}</span>
+            {% else %} 
+                    <span class="dj-drop">{{ item.title }}</span>
+            {% endif %}
+                </a>
+                <div class="dj-subwrap  multiple_cols subcols3" style="display: none;">
+                    <div class="dj-subwrap-in" style="width:450px;">
+                        <div class="dj-subcol">
+                            <ul class="dj-submenu" style="width:500px; display: flex; flex-flow: wrap;">
+            {% for subitem in item.items %} 
+                                <li class="itemid109" style="width: 200px; margin: 0rem 0.5rem 0rem 0.5rem;">
+                                    <a href="{{ subitem.url }}">
+                                        {{ subitem.title }}
+                                    </a>
+                                </li>
+            {% endfor %}
+                            </ul>
+                        </div>
                             <div style="clear:both;height:0"></div> 
-                </div>
-            </div>
-        </li>
-{% endfor %}
+                    </div>
+                </div>     
+            </li>
+        {% endfor %}
     </ul>
 
-     <div id="dj-megamenu99mobile" class="dj-megamenu-offcanvas dj-megamenu-offcanvas-light ">
+    <div id="dj-megamenu99mobile" class="dj-megamenu-offcanvas dj-megamenu-offcanvas-light ">
         <a href="#" class="dj-mobile-open-btn" aria-label="Open mobile menu">
             <span class="fa fa-bars" aria-hidden="true"></span>
         </a>
@@ -50,22 +42,27 @@
             <div class="dj-offcanvas-content">
                 <ul class="dj-mobile-nav dj-mobile-light ">
                 {% for item_mobile in staticMenu.menuItems %} 
-    <li class="dj-mobileitem itemid-108 divider deeper parent {{ item_mobile.isActive or item_mobile.isChildActive ? 'first active' : '' }}  {{ item_mobile.items ? 'dropdown' : '' }}">
-<a tabindex="0" {% if item_mobile.items %} class="dj-up_a" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="#"{% else %} href="{{ item_mobile.url }}" class="dj-up_a" {% endif %}>
-{% if item_mobile.items %}
-{{ item_mobile.title }}
-{% else %} 
-{{ item_mobile.title }}
-{% endif %}
- </a>
+                    <li class="dj-mobileitem itemid-108 divider deeper parent {{ item_mobile.isActive or item_mobile.isChildActive ? 'first active' : '' }}  {{ item_mobile.items ? 'dropdown' : '' }}">
+            <a tabindex="0" 
+                        {% if item_mobile.items %} 
+                            class="dj-up_a" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="#"
+                        {% else %} 
+                            href="{{ item_mobile.url }}" class="dj-up_a" 
+                        {% endif %}>
+                                {% if item_mobile.items %}
+                                {{ item_mobile.title }}
+                                {% else %} 
+                                {{ item_mobile.title }}
+                                {% endif %}
+            </a>
                         <ul class="dj-mobile-nav-child">
-                        {% for subitem_mobile in item_mobile.items %} 
-                            <li class="dj-mobileitem 123">
-                                <a href="{{ subitem_mobile.url }}">
-                                    {{ subitem_mobile.title }}
-                                </a>
-                            </li>
-                        {% endfor %}
+                            {% for subitem_mobile in item_mobile.items %} 
+                                <li class="dj-mobileitem 123">
+                                    <a href="{{ subitem_mobile.url }}">
+                                        {{ subitem_mobile.title }}
+                                    </a>
+                                </li>
+                            {% endfor %}
                         </ul>
                     </li>
                     {% endfor %}
@@ -74,4 +71,38 @@
             <div class="dj-offcanvas-end" tabindex="0"></div>
         </aside>
     </div>
+</div> #}
+<span class="screen-darken"></span>
+<div class="container">
+  <button data-trigger="navbar_main" class="d-lg-none btn" type="button">  
+    <div class="sp-module ">
+      <div class="sp-module-content">
+        <div id="dj-megamenu99mobileWrap">
+          <div id="dj-megamenu99mobile" class="dj-megamenu-offcanvas dj-megamenu-offcanvas-light ">
+	  	      <a href="#" class="dj-mobile-open-btn" aria-label="Open mobile menu"><span class="fa fa-bars" aria-hidden="true"></span></a>
+	        </div>
+        </div>
+      </div>
+    </div>
+  </button>
+  <nav id="navbar_main" class="mobile-offcanvas navbar navbar-expand-lg {# navbar-dark bg-primary #}">
+    <div class="container-fluid">
+      <div class="offcanvas-header">  
+        <button class="btn-close float-end"></button>
+      </div>
+      <ul class="navbar-nav">
+       {% for item in staticMenu.menuItems %} 
+         <li class="nav-item dropdown">
+            <a {% if item.items %} class="nav-link {{ item.isActive or item.isChildActive ?  'active' : '' }}  dropdown-toggle" href="#" data-bs-toggle="dropdown"
+            {% else %} class="nav-link {{ item.isActive or item.isChildActive ?  'active' : '' }}" href="{{ item.url }}" {% endif %} >  {{ item.title }}  </a>
+              <ul class="dropdown-menu">
+              {% for subitem in item.items %} 
+              <li><a class="dropdown-item {{ subitem.isActive or subitem.isChildActive ?  'active' : '' }}" href="{{ subitem.url }}">{{ subitem.title }}</a></li>
+              {% endfor %}
+              </ul>
+         </li>
+       {% endfor %}
+      </ul>  
+    </div>
+  </nav>
 </div>

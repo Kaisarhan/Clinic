@@ -1,7 +1,10 @@
-title = "Порядок оказания стационарной помощи"
-url = "/posp"
-layout = "page"
+title = "Блог директора"
+url = "/blog-dir"
+layout = "default"
+description = "Блог директора можно задавать вопросы"
 is_hidden = 0
+
+[commentsPost]
 ==
 <div class="services">
   <div class="servicesName">
@@ -14,7 +17,6 @@ is_hidden = 0
       </figcaption>
     </figure>
   </div>
-  <div class="container">
-    {% content "main-menu/posp" %}
-  </div>
-</div>
+    {# {% content "main-menu2/blog-dir" %} #}
+    {% component 'commentsPost' %}
+</div

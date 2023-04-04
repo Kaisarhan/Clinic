@@ -1,0 +1,37 @@
+<span class="screen-darken"></span>
+<div class="container">
+  <button data-trigger="navbar_main" class="d-lg-none btn" type="button">  
+    <div class="sp-module ">
+      <div class="sp-module-content">
+        <div id="dj-megamenu99mobileWrap">
+          <div id="dj-megamenu99mobile" class="dj-megamenu-offcanvas dj-megamenu-offcanvas-light ">
+	  	      <a href="#" class="dj-mobile-open-btn" aria-label="Open mobile menu"><span class="fa fa-bars" aria-hidden="true"></span></a>
+	        </div>
+        </div>
+      </div>
+    </div>
+  </button>
+  <nav id="navbar_main" class="mobile-offcanvas navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+      <div class="offcanvas-header">  
+        <button class="btn-close float-end"></button>
+      </div>
+      <ul class="navbar-nav">
+       {% for item in staticMenu.menuItems %} 
+         <li class="nav-item dropdown">
+            <a {% if item.items %} class="nav-link {{ item.isActive or item.isChildActive ?  'active' : '' }}  dropdown-toggle" href="#" data-bs-toggle="dropdown"
+            {% else %} class="nav-link {{ item.isActive or item.isChildActive ?  'active' : '' }}" href="{{ item.url }}" {% endif %} >  {{ item.title }}  </a>
+              <ul class="dropdown-menu">
+              {% for subitem in item.items %} 
+              <li><a class="dropdown-item {{ subitem.isActive or subitem.isChildActive ?  'active' : '' }}" href="{{ subitem.url }}">{{ subitem.title }}</a></li>
+              {% endfor %}
+              </ul>
+         </li>
+       {% endfor %}
+      </ul>  
+    </div>
+  </nav>
+</div>
+
+
+

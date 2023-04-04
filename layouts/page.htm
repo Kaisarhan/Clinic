@@ -9,6 +9,9 @@ default = 0
 
 [localePicker]
 forceUrl = 0
+
+[session]
+security = "all"
 ==
 <!DOCTYPE html>
 <html>
@@ -42,8 +45,7 @@ forceUrl = 0
     <script src="{{ 'assets/js/slider.js'|theme }}" type="text/javascript"></script>
     <script src="{{ 'assets/js/owl.carousel.min.js'|theme }}" type="text/javascript"></script>
     <!-- MY CUSTOM JS START -->
-    <script src="{{ 'assets/js/script.js'|theme }}" type="text/javascript"></script>
-    
+    <script src="{{ 'assets/js/menu.js'|theme }}" type="text/javascript"></script>
     <!-- MY CUSTOM JS END -->
 
         {% styles %}
@@ -79,8 +81,14 @@ forceUrl = 0
     </div>
 
 
-        {% snowboard all %}
-        {% scripts %} 
+        {#{% snowboard all %}#}
+        
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+<script src="{{ ['assets/javascript/app.js',
+                'assets/js/script.js'
+        ]|theme }}" type="text/javascript"></script>
+        {% framework extras %}
+        {% scripts %} 
+        
     </body> 
 </html>

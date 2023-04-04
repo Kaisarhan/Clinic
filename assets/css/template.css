@@ -178,7 +178,7 @@ ul.social-icons > li {
   color: #fff;
 }
 .body-innerwrapper {
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 .layout-boxed .body-innerwrapper {
   max-width: 1240px;

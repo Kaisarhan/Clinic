@@ -1,7 +1,10 @@
-title = "Порядок оказания стационарной помощи"
-url = "/posp"
-layout = "page"
+title = "Отзывы"
+url = "/reviews"
+layout = "default"
+description = "Отзывы и предложения"
 is_hidden = 0
+
+[commentsPost]
 ==
 <div class="services">
   <div class="servicesName">
@@ -14,7 +17,5 @@ is_hidden = 0
       </figcaption>
     </figure>
   </div>
-  <div class="container">
-    {% content "main-menu/posp" %}
-  </div>
+    {% component 'commentsPost' %}
 </div>
