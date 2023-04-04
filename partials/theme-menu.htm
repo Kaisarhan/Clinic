@@ -96,9 +96,9 @@
             <a {% if item.items %} class="nav-link {{ item.isActive or item.isChildActive ?  'active' : '' }}  dropdown-toggle" href="#" data-bs-toggle="dropdown"
             {% else %} class="nav-link {{ item.isActive or item.isChildActive ?  'active' : '' }}" href="{{ item.url }}" {% endif %} >  {{ item.title }}  </a>
               <ul class="dropdown-menu">
-              {% for subitem in item.items %} 
-              <li><a class="dropdown-item {{ subitem.isActive or subitem.isChildActive ?  'active' : '' }}" href="{{ subitem.url }}">{{ subitem.title }}</a></li>
-              {% endfor %}
+                {% for subitem in item.items %} 
+                    <li><a class="dropdown-item {{ subitem.isActive or subitem.isChildActive ?  'active' : '' }}" href="{{ subitem.url }}">{{ subitem.title }}</a></li>
+                {% endfor %}
               </ul>
          </li>
        {% endfor %}
