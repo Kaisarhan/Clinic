@@ -149,6 +149,12 @@ tabs:
             default: 87172000000
             span: right
 
+        contact_url:
+            tab: Contact
+            label: Записаться на приём URL
+            type: text
+            default: https://damumed.kz/
+
         # TAB: SOCIAL
         social_youtube:
             tab: Social media
