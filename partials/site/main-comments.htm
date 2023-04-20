@@ -15,7 +15,10 @@
                                 </div>
                                 <div class="webique_quote_info">
                                     <figure class="webique_img_wrap"><img
-                                            src="{{ comments_item.auth_Image|media }}"
+                                            src="{% if this.theme.comments_items|length < 0 %} {{ comments_item.auth_Image|media }}
+                                            {% else %}
+                                            {{'assets/images/icons/no-avatar.png'|theme }}
+                                            {% endif %}"
                                             alt="{{comments_item.auth_name}}"></figure>
                                     <div class="webique_quote_title_wrap">
                                         <h6 class="webique_quote_title">{{comments_item.auth_name}}</h6>

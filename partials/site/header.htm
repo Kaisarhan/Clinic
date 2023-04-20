@@ -25,11 +25,11 @@ function onStart()
                 <div id="sp-top2" class="col-lg-4">
     {% if this.theme.logo|length > 0 %}
                     <div class="sp-column text-center text-lg-center">
-                        <a href="{{ 'home'|page }}"><img src="{{ this.theme.logo | media }}" style="height: 45px;display: inline-block;"></a>
+                        <a href="{{ 'home'|page }}"><img src="{{ this.theme.logo | media }}" style="height: 65px;display: inline-block;"></a>
                     </div>
     {% else %}
                     <div class="sp-column text-center text-lg-center">
-                        <a href="{{ LogoURLHeader }}">Укажите свой лого в backend</a>
+                        <a href="{{ LogoURLHeader }}">{{'Укажите свой лого в backend'|_}}</a>
                     </div>
     {% endif %}
                 </div>
