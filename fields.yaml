@@ -45,6 +45,12 @@ tabs:
             mode: image  
             span: right
 
+        # TAB: THEME COLORS
+        theme_color:
+            tab: Theme Colors
+            label: Основной цвет темы
+            type: colorpicker
+            default: "#07a1f8"
 
         # TAB: Slide
         slide_title:
@@ -219,3 +225,29 @@ tabs:
                         type: mediafinder
                         mode: image
                         span: right
+
+        siteBar:
+            tab: SiteBar
+            label: Sitebar
+            prompt: Add new item
+            type: repeater
+            form:
+                fields:
+                    img:
+                        label: Image
+                        type: mediafinder
+                        mode: image
+                        span: storm
+                        cssClass: col-xs-2
+                    title:
+                        label: title
+                        type: text
+                        default: Title
+                        span: storm
+                        cssClass: col-xs-10
+                    url:
+                        label: url
+                        type: text
+                        default: https://skk.kz
+                        span: storm
+                        cssClass: col-xs-10

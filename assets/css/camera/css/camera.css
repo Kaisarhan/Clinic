@@ -448,7 +448,7 @@
 .camera_caption > div {
 	background: #000;
 	background: rgba(255, 255, 255, 0.85);
-	border-bottom:4px solid #ff4345;
+	border-bottom:4px solid var(--theme-hex);
 }
 .camera_wrap .camera_pag .camera_pag_ul li {
 	background: #b7b7b7;

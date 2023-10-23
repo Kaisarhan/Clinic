@@ -6,6 +6,20 @@
                     <div class="webique_featured_links_shortcode wpb_content_element vc_clearfix">
                         <div id="webique_760d6b998c" class="webique_featured_links">
                             <ul>
+                            {% if (this.theme.siteBar|length > 0)%}
+                            {% for items in this.theme.siteBar %}
+                                <li>
+                                    <div id="webique_760d6b998c_1" class="webique_featured_link">
+                                        <figure class="webique_featured_link_icon">
+                                            <img class="" title="icon_4" src="{{ items.img|media }}" alt="icon_4" width="38" height="37">
+                                        </figure>
+                                        <a href="{{ items.url }}" target="_blank">
+                                            <span class="webique_featured_link_title">{{ items.title }}</span>
+                                        </a>
+                                    </div>
+                                </li>
+                            {% endfor %}
+                            {% else %}
                                 <li>
                                     <div id="webique_760d6b998c_1" class="webique_featured_link">
                                         <figure class="webique_featured_link_icon">
@@ -36,6 +50,7 @@
                                         </a>
                                     </div>
                                 </li>
+                            {% endif %}
                             </ul>
                         </div>
                     </div>

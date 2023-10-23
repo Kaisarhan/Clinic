@@ -71,11 +71,17 @@ security = "all"
     <script src="{{ 'assets/js/owl.carousel.min.js'|theme }}" type="text/javascript"></script>
     <!-- MY CUSTOM JS START -->
 
-    
+<style>
+    :root {
+        --theme-hex: {{ this.theme.theme_color }};
+    }
+</style>
     
     <!-- MY CUSTOM JS END -->
 
         {% styles %}
+
+
 </head>
     <body class="site helix-ultimate com-content view-category layout-blog task-none itemid-102 ru-ru ltr sticky-header layout-boxed offcanvas-init offcanvs-position-right">
         <div class="dj-offcanvas-wrapper">
