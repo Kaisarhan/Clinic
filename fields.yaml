@@ -52,39 +52,34 @@ tabs:
             type: colorpicker
             default: "#07a1f8"
 
-        # TAB: Slide
-        slide_title:
-            tab: Slide
-            label: Title 
-            type: text
-            default: IT-ИНФРАСТРУКТУРА, ОБСЛУЖИВАНИЕ СЕРВЕРОВ
-        
-        slide_description:
-            tab: Slide
-            label: Description 
-            type: textarea
-            default: Что входит в услугу обслуживания IT-инфраструктуры и серверов
-        
+        # TAB: Slide        
         slide_items:
             tab: Slide
             label: Slides
             titleFrom: title
             prompt: Add new service
             type: repeater
+            translatable: true
             form:
                 fields:
                     name:
                         label: Slide name
                         type: text
                         default: Name one
+                        storm: storm
+                        cssClass: col-md-10
                     description:
                         label: Description
                         type: textarea
                         default: Description text
+                        span: storm
+                        cssClass: col-md-10
                     slideImage:
                         label: Image
                         type: mediafinder
                         mode: image
+                        span: storm
+                        cssClass: col-md-2
 
         # TAB: MAIN-COMMENTS
         comments_title:
@@ -92,6 +87,7 @@ tabs:
             label: Title 
             type: text
             default: Отзывы
+            translatable: true
         
         comments_items:
             tab: Comments
@@ -99,20 +95,27 @@ tabs:
             titleFrom: title
             prompt: Add new service
             type: repeater
+            translatable: true
             form:
                 fields:
+                    auth_Image:
+                        label: Image
+                        type: mediafinder
+                        mode: image    
+                        span: storm
+                        cssClass: col-md-2   
                     auth_name:
                         label: Slide name
                         type: text
                         default: Name one
+                        span: storm
+                        cssClass: col-md-10
                     auth_description:
                         label: Description
                         type: textarea
                         default: Description text
-                    auth_Image:
-                        label: Image
-                        type: mediafinder
-                        mode: image                               
+                        span: storm
+                        cssClass: col-md-10                        
 
         # TAB: CONTACTS
         contact_title:
@@ -190,20 +193,27 @@ tabs:
             titleFrom: title
             prompt: Add new banner
             type: repeater
+            translatable: true
             form:
                 fields:
-                    name:
-                        label: Banner name
-                        type: text
-                        default: Banner name
-                    url:
-                        label: url
-                        type: text
-                        default:
                     bannerImage:
                         label: Image
                         type: mediafinder
                         mode: image
+                        span: storm
+                        cssClass: col-md-2
+                    name:
+                        label: Banner name
+                        type: text
+                        default: Banner name
+                        span: storm
+                        cssClass: col-md-10
+                    url:
+                        label: url
+                        type: text
+                        default: https://skk.kz
+                        span: storm
+                        cssClass: col-md-10
 
         # TAB: usefulSlider
         usefulSlider:
@@ -231,6 +241,7 @@ tabs:
             label: Sitebar
             prompt: Add new item
             type: repeater
+            translatable: true
             form:
                 fields:
                     img:
@@ -251,3 +262,37 @@ tabs:
                         default: https://skk.kz
                         span: storm
                         cssClass: col-xs-10
+
+        sitebarContant:
+            tab: sitebarContant
+            label: sitebarContant
+            prompt: Add items
+            type: repeater
+            translatable: true
+            form:
+                fields:
+                    png:
+                        label: select you png image
+                        type: mediafinder
+                        mode: image
+                        span: storm
+                        cssClass: col-md-2
+                    title:
+                        label: You title (Заголовок)
+                        type: text
+                        default: Title
+                        span: storm
+                        cssClass: col-md-5
+                    url:
+                        label: You URL
+                        type: text
+                        default: https://skk.kz/
+                        span: storm
+                        cssClass: col-md-5
+                    description:
+                        label: Description (Описание)
+                        type: text
+                        default: Краткое описание элемента
+                        span: storm
+                        cssClass: col-md-10
+
