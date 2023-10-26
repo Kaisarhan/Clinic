@@ -12,23 +12,11 @@ forceUrl = 0
                                 <div class="container-inner">
                                     <div class="row">
                                         {# sitebar #}
-{# left sitebar #}     {% partial 'site/sitebar' %} 
-{# Check UP and 3 items #}    {% partial 'site/sitebarContent' %} 
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                        <section id="sp-main-body">
-                            <div class="container">
-                                <div class="container-inner">
-                                    <div class="row">
-                                        
-                                        {% partial 'site/main-comments' %}
-
+{# left sitebar #}              {% partial 'site/sitebar' %} 
                                         {% partial 'site/main-componets' %}
 
-                                        {% partial 'site/main-call' %}
-
+                                        {# {% partial 'site/main-call' %} #}
+{# Check UP and 3 items #}      {# {% partial 'site/sitebarContent' %}  #}
                                     </div>
                                 </div>
                             </div>
@@ -45,6 +33,22 @@ forceUrl = 0
 
                                             </div>
                                         </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section id="sp-main-body">
+                            <div class="container">
+                                <div class="container-inner">
+                                    <div class="row">
+                                        {% partial 'site/sitebarContent' %} 
+                                        {% partial 'site/main-call' %}
+                                        {# {% partial 'site/main-comments' %} #}
+
+{#                                         {% partial 'site/main-componets' %}
+
+                                        {% partial 'site/main-call' %} #}
+
                                     </div>
                                 </div>
                             </div>
