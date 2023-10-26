@@ -7,7 +7,7 @@
                         <div class="webique_banner_img">
                             <figure class="webique_img_wrap"><a
                                     class="webique_img_link"
-                                    href="tel:(832)%20123-4567"><img
+                                    href="tel:{{ this.theme.contact_phone}}"><img
                                         class="full_width attachment-full"
                                         src="{{'assets/images/icons/image-1.jpg'|theme }}"
                                         sizes="(max-width: 267px) 100vw, 267px"
@@ -20,7 +20,9 @@
                             <div class="webique_banner_info_items">
                                 <ul>
                                     <li><a title="" href="tel:{{ this.theme.contact_phone }}"><span class="webique_banner_info_item_icon fa fa-phone"></span><span style="font-size: 20px;">{{ this.theme.contact_number }}</span></a></li>
+                                    {% if (this.theme.contact_phone2|length > 0) %}
                                     <li><a title="" href="tel:{{ this.theme.contact_phone2 }}"><span class="webique_banner_info_item_icon fa fa-phone"></span><span style="font-size: 20px;">{{ this.theme.contact_number2 }}</span></a></li>
+                                    {% endif %}
                                 </ul>
                             </div>
                         </div>
